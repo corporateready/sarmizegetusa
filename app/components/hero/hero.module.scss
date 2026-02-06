@@ -35,7 +35,7 @@
   .hero__bg_mobile {
     @apply inline-flex w-full h-[390rem] absolute top-[230rem] left-0 z-3;
 
-    @media screen and (width > 640px) {
+    @media screen and (width >= 640px) {
       @apply hidden;
     }
 
@@ -49,7 +49,7 @@
     @apply hidden;
 
     @media screen and (width >= 640px) {
-      @apply inline-flex w-full h-[710rem] absolute top-[230rem] left-0 z-3;
+      @apply inline-flex w-full h-[650rem] absolute top-[210rem] left-0 z-3;
     }
 
     @media screen and (width >= 1920px) {
@@ -58,7 +58,7 @@
     
     &::after {
       content: "";
-      @apply absolute bottom-[90rem] left-0 z-4 inline-flex w-full h-[230rem];
+      @apply absolute bottom-[10rem] left-0 z-4 inline-flex w-full h-[450rem];
       background: linear-gradient(180deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 76%, rgba(4, 7, 17, 1) 100%);
     }
 
@@ -81,7 +81,7 @@
   @apply hidden;
 
   @media screen and (width >= 640px) {
-   @apply inline-block text-[52rem] text-center leading-[105%] w-full relative z-3 text-white font-bold mt-[624rem];
+   @apply inline-block text-[52rem] text-center leading-[110%] w-full relative z-3 text-white font-bold mt-[560rem];
   }
 
   @media screen and (width >= 1920px) {
@@ -332,18 +332,15 @@
 }
 // Location
 .location__wrapper {
-  @apply w-dvw h-[1400rem] relative z-2 mt-[-46rem] overflow-x-hidden;
-  
+  @apply w-dvw h-[1400rem] relative z-2 mt-[-46rem];
   @media screen and (width >= 640px) {
-    @apply mt-[85rem] h-[2440rem];  
-    overflow-x: visible;
+    @apply mt-[-54rem] h-[2640rem] object-top relative z-2;  
 
     &::after {
-      content: "";  @apply absolute top-[-160rem] left-0 z-3 inline-flex w-full h-[50rem];
+      content: "";  @apply absolute top-[-20rem] left-0 z-3 inline-flex w-full h-[110rem];
       background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 74%, rgba(4, 7, 17, 1) 100%);
     }
   }
-
   @media screen and (width >= 1920px) {
       @apply inline-flex relative left-1/2 -translate-x-1/2 z-4 mt-[60px] w-[1920px] h-[2100px];
 
@@ -352,8 +349,7 @@
         @apply absolute top-[-60px] left-0 z-[1] inline-flex w-full h-[200px];
         background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 50%, rgba(4, 7, 17, 1) 100%);
       }
-    }
-
+  }
   &_bg__mobile {
     @apply absolute top-0 left-0 z-3;
      @media screen and (width > 640px) {
@@ -363,7 +359,7 @@
   &_bg__laptop {
       @apply hidden;
     @media screen and (width >= 640px) {
-      @apply inline-block absolute top-0 left-0 z-3 mt-[-156rem] h-full w-full;
+      @apply inline-flex mt-0 h-full w-dvw;
     }
     @media screen and (width >= 1920px) {
       @apply hidden;
@@ -376,14 +372,12 @@
       @apply inline-flex mt-[-60px];
     }
   }
-   
-
 }
 .location__title_text {
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[347rem] z-5;
 
   @media screen and (width >= 640px) {
-     @apply text-[72rem] font-semibold text-white text-center w-full relative top-[205rem];
+     @apply text-[72rem] font-semibold text-white text-center w-full relative top-[510rem];
      letter-spacing: .4%;
   }
 
@@ -396,7 +390,7 @@
 
 
   @media screen and (width >= 640px) {
-    @apply text-[36rem] font-normal text-white text-center w-full relative top-[226rem];
+    @apply text-[36rem] font-normal text-white text-center w-full relative top-[530rem];
   }
 
   @media screen and (width >= 1920px) {
@@ -407,7 +401,7 @@
    @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative z-3 mt-[705rem];
 
   @media screen and (width > 640px) {
-   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full mt-[640rem];
+   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full mt-[986rem];
   }
 
   @media screen and (width >= 1920px) {
@@ -418,7 +412,7 @@
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full relative z-3 mt-[6rem];
 
   @media screen and (width > 640px) {
-    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full mt-[21rem];
+    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full mt-[18rem];
   }
 
   @media screen and (width >= 1920px) {

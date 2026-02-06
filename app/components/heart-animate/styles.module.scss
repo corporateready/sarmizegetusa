@@ -31,9 +31,9 @@
             }
         }
 
-    @media screen and (width > 640px) {
+    @media screen and (width >= 640px) {
     content: '';
-      @apply w-[800rem] h-[705rem] bg-[url('/mobile/location/location-heart.avif')] bg-contain bg-center bg-no-repeat inline-flex absolute top-[-10rem] left-1/2 -translate-x-1/2 z-[3];
+      @apply w-[800rem] h-[705rem] bg-[url('/mobile/location/location-heart.avif')] bg-contain bg-center bg-no-repeat inline-flex absolute top-[260rem] left-1/2 -translate-x-1/2 z-[3];
 
     }
 

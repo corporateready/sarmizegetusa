@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 .exfm_wrapper {
-  @apply w-full min-h-full flex flex-col justify-between items-center relative z-0;
+  @apply w-dvw min-h-full flex flex-col justify-between items-center relative z-0;
 
   @media screen and (width >= 1920px) {
     @apply w-[1920px] h-auto mx-auto relative z-0;

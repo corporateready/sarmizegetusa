@@ -3,6 +3,7 @@
 html {
   @apply w-full h-full relative;
   scroll-behavior: smooth;
+  font-size: 16px;
   font-size: calc(100vw / (1920 * 1));
   @media screen and (min-width: 641px) {
     font-size: calc(100vw / (1440 * 1));

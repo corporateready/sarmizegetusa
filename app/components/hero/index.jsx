@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const Hero = ({ handleToggle }) => {
   return (
+    <>
     <div className={styles.hero__wrapper}>
       <div className={styles.hero}>
         <div className={styles.bg__light}></div>
@@ -18,6 +19,7 @@ const Hero = ({ handleToggle }) => {
               src="/building-mobile.avif"
               alt="sarmizegetusa building"
               fill
+              loading="eager"
             />
           </div>
           <div className={styles.hero__bg_desktop}>
@@ -25,20 +27,16 @@ const Hero = ({ handleToggle }) => {
               src="/building-large.avif"
               alt="sarmizegetusa building"
               fill
+              loading="eager"
               className="object-cover"
             />
-            {/* <Image
-              src="/building-desktop.avif"
-              alt="sarmizegetusa building"
-              fill
-            /> */}
-
           </div>
           <div className={styles.hero__bg_large}>
             <Image
               src="/building-large.avif"
               alt="sarmizegetusa building"
               fill
+              loading="eager"
             />
           </div>
         </div>
@@ -78,7 +76,7 @@ const Hero = ({ handleToggle }) => {
             className={`${styles.location__wrapper_bg__mobile} object-cover`}
           />
            <Image
-            src={"/location-bg-large.avif"}
+            src={"/location-bg-laptop.avif"}
             alt="sarmizegetusa location background"
             loading="eager"
             fill
@@ -118,6 +116,8 @@ const Hero = ({ handleToggle }) => {
       {/* Facilities */}
       <Facilities />
     </div>
+    
+    </>
   );
 };
 
