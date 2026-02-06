@@ -20,6 +20,7 @@ const Hero = ({ handleToggle }) => {
               alt="sarmizegetusa building"
               fill
               loading="eager"
+              sizes="(max-width: 640px) 100vw"
             />
           </div>
           <div className={styles.hero__bg_desktop}>
@@ -29,6 +30,7 @@ const Hero = ({ handleToggle }) => {
               fill
               loading="eager"
               className="object-cover"
+              sizes="(min-width: 640px) 100vw"
             />
           </div>
           <div className={styles.hero__bg_large}>
@@ -37,6 +39,7 @@ const Hero = ({ handleToggle }) => {
               alt="sarmizegetusa building"
               fill
               loading="eager"
+              sizes="(min-width: 640px) 100vw"
             />
           </div>
         </div>
@@ -74,6 +77,7 @@ const Hero = ({ handleToggle }) => {
             loading="eager"
             fill
             className={`${styles.location__wrapper_bg__mobile} object-cover`}
+            sizes="(max-width: 640px) 100vw"
           />
            <Image
             src={"/location-bg-laptop.avif"}
@@ -81,6 +85,7 @@ const Hero = ({ handleToggle }) => {
             loading="eager"
             fill
             className={`${styles.location__wrapper_bg__laptop} object-cover`}
+            sizes="(max-width: 640px) 100vw"
           />
          <Image
             src={"/location-bg-large.avif"}
@@ -88,6 +93,7 @@ const Hero = ({ handleToggle }) => {
             loading="eager"
             fill
             className={styles.location__wrapper_bg__large}
+            sizes="(max-width: 640px) 100vw"
           />
         <HeartAnimate />
         <p className={styles.location__title_text}>
