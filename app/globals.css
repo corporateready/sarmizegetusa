@@ -25,9 +25,9 @@ body {
   overflow-x: hidden !important; 
 
   @media screen and (width >= 1920px) {
-    @supports (-webkit-hyphens:none) {
+    /* @supports (-webkit-hyphens:none) {
     width: 45%;
-  } 
+  }  */
   }
 }
 
