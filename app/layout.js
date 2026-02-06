@@ -2,8 +2,8 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Botanica Avenew",
-  description: "Avenew Botanica coming soon",
+  title: "SARMIZEGETUSA",
+  description: "SARMIZEGETUSA START VÂNZĂRI",
   robots: {
     index: true,
     follow: true,
