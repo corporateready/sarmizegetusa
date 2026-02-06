@@ -7,14 +7,14 @@
  
      &::before {
       content: '';
-      @apply w-[600px] h-[4528px] absolute top-0 left-[-300px] z-5;
+      @apply w-[600px] h-[4548px] absolute top-0 left-[-300px] z-5;
       background: linear-gradient(-90deg,rgba(7, 11, 27, 0) 0%, rgba(7, 11, 27, 1) 50%);
        filter: blur(10px);
     }
 
     &::after {
       content: '';
-      @apply w-[600px] h-[4528px] absolute top-0 right-[-300px] z-5;
+      @apply w-[600px] h-[4548px] absolute top-0 right-[-300px] z-5;
       background: linear-gradient(90deg,rgba(7, 11, 27, 0) 0%, rgba(7, 11, 27, 1) 50%);
       filter: blur(10px);
     }

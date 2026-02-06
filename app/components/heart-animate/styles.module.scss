@@ -33,12 +33,12 @@
 
     @media screen and (width > 640px) {
     content: '';
-      @apply w-[800rem] h-[705rem] bg-[url('/mobile/location/location-heart.avif')] bg-contain bg-center bg-no-repeat inline-flex absolute top-[100rem] left-1/2 -translate-x-1/2 z-[3];
+      @apply w-[800rem] h-[705rem] bg-[url('/mobile/location/location-heart.avif')] bg-contain bg-center bg-no-repeat inline-flex absolute top-[-10rem] left-1/2 -translate-x-1/2 z-[3];
 
     }
 
     @media screen and (width >= 1920px) {
     content: '';
-      @apply w-[690px] h-[650px] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[60px] left-1/2 -translate-x-1/2 z-[3];
+      @apply w-[690px] h-[650px] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[20px] left-1/2 -translate-x-1/2 z-[3];
     }
 }

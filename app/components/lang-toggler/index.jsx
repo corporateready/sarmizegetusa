@@ -36,7 +36,7 @@ const Index = () => {
           ? styles.header_navigate__lang
           : styles.header_navigate__lang_active
       }
-      onClick={() => setIsActiveButton(!isActiveButton)}
+      // onClick={() => setIsActiveButton(!isActiveButton)}
     >
       <span
         className={`${styles.header__drop_lang__span_initial} ${
@@ -45,9 +45,10 @@ const Index = () => {
             : "border-0"
         }`}
       >
-        {isLanguageActive.slice(6, 8)}
+        {/* {isLanguageActive.slice(6, 8)} */}
+        ro
       </span>
-      {isActiveButton ? (
+      {/* {isActiveButton ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -86,7 +87,7 @@ const Index = () => {
         </motion.div>
       ) : (
         ""
-      )}
+      )} */}
     </motion.button>
   );
 };

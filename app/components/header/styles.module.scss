@@ -45,7 +45,7 @@
   @apply flex justify-end items-center gap-[30rem];
 
   @media screen and (min-width: 641px) {
-    @apply w-[242rem] flex justify-center gap-[15rem];
+    @apply w-[242rem] flex gap-[15rem];
   }
 
   @media screen and (width >= 1920px) {

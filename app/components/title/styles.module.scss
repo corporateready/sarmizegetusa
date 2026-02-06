@@ -5,8 +5,8 @@
   letter-spacing: 34%;
 
   @media screen and (width > 640px) {
-    @apply w-max text-center text-white/63 text-[103rem] font-medium uppercase leading-none z-[1] absolute top-[178rem] left-1/2 -translate-x-1/2 ml-[30rem];
-    letter-spacing: 36.8rem;
+    @apply w-max text-center text-white/63 text-[103rem] font-medium uppercase leading-none z-[1] absolute top-[158rem] left-1/2 -translate-x-1/2 ml-[19rem];
+    // letter-spacing: 3;
   }
 
    @media screen and (width >= 1920px) {

@@ -17,7 +17,7 @@
   }
 
   @media screen and (width >= 640px) {
-    @apply h-[1170rem] relative z-0;
+    @apply h-[920rem] relative z-0;
    }
 
   @media screen and (width >= 1920px) {
@@ -49,7 +49,7 @@
     @apply hidden;
 
     @media screen and (width >= 640px) {
-      @apply inline-flex w-full h-[930rem] absolute top-[250rem] left-0 z-3;
+      @apply inline-flex w-full h-[710rem] absolute top-[230rem] left-0 z-3;
     }
 
     @media screen and (width >= 1920px) {
@@ -58,8 +58,8 @@
     
     &::after {
       content: "";
-      @apply absolute bottom-[-220rem] left-0 z-4 inline-flex w-full h-[230rem];
-      background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 76%, rgba(4, 7, 17, 1) 100%);
+      @apply absolute bottom-[90rem] left-0 z-4 inline-flex w-full h-[230rem];
+      background: linear-gradient(180deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 76%, rgba(4, 7, 17, 1) 100%);
     }
 
   }
@@ -81,15 +81,15 @@
   @apply hidden;
 
   @media screen and (width >= 640px) {
-   @apply inline-block text-[52rem] text-center leading-[105%] w-full relative z-3 text-white font-bold mt-[774rem];
+   @apply inline-block text-[52rem] text-center leading-[105%] w-full relative z-3 text-white font-bold mt-[624rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply inline-block text-[52px] text-center leading-[100%] w-full text-white font-bold relative top-0 left-1/2 -translate-1/2 z-4 mt-[796px];
+    @apply inline-block text-[52px] text-center leading-[100%] w-full text-white font-bold relative top-0 left-1/2 -translate-1/2 z-4 mt-[800px];
   }
 }
 .hero__text_mobile {
-  @apply text-[26rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[566rem] left-1/2 -translate-1/2 z-[3];
+  @apply text-[26rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[573rem] left-1/2 -translate-1/2 z-[3];
 
   @media screen and (width > 640px) {
    @apply hidden;
@@ -128,7 +128,7 @@
   }
 }
 .button__detail {
-  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center relative z-3 mt-[550rem] mx-auto;
+  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center relative z-3 mt-[556rem] mx-auto;
  
   background: linear-gradient(
     0deg,
@@ -175,7 +175,7 @@
 }
 
 @media screen and (width >= 1920px) {
-  @apply text-white text-[30px] font-medium leading-[100%] w-[345px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-4 top-[902px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
+  @apply text-white text-[30px] font-medium leading-[100%] w-[345px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-4 top-[906px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
     0deg,
@@ -332,23 +332,24 @@
 }
 // Location
 .location__wrapper {
-  @apply w-dvw h-[1400rem] relative z-2 mt-[-46rem] overflow-hidden;
+  @apply w-dvw h-[1400rem] relative z-2 mt-[-46rem] overflow-x-hidden;
   
-  @media screen and (width >=640px) {
-    @apply mt-[-60rem] h-[2440rem];  
+  @media screen and (width >= 640px) {
+    @apply mt-[85rem] h-[2440rem];  
+    overflow-x: visible;
 
     &::after {
-      content: "";  @apply absolute top-[-110rem] left-0 z-3 inline-flex w-full h-[280rem];
-      background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 24%, rgba(4, 7, 17, 1) 100%);
+      content: "";  @apply absolute top-[-160rem] left-0 z-3 inline-flex w-full h-[50rem];
+      background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 74%, rgba(4, 7, 17, 1) 100%);
     }
   }
 
   @media screen and (width >= 1920px) {
-      @apply inline-flex relative left-1/2 -translate-x-1/2 z-4 mt-0 w-[1920px] h-[2100px];
+      @apply inline-flex relative left-1/2 -translate-x-1/2 z-4 mt-[60px] w-[1920px] h-[2100px];
 
       &::after {
         content: "";
-        @apply absolute top-0 left-0 z-[1] inline-flex w-full h-[140px];
+        @apply absolute top-[-60px] left-0 z-[1] inline-flex w-full h-[200px];
         background: linear-gradient(0deg,rgba(4, 7, 17, 0) 0%, rgba(4, 7, 17, 1) 50%, rgba(4, 7, 17, 1) 100%);
       }
     }
@@ -372,55 +373,55 @@
     @apply hidden;
 
     @media screen and (width >= 1920px) {
-      @apply inline-flex mt-[-30px];
+      @apply inline-flex mt-[-60px];
     }
   }
    
 
 }
 .location__title_text {
-  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[336rem] z-5;
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[347rem] z-5;
 
   @media screen and (width >= 640px) {
-     @apply text-[72rem] font-semibold text-white text-center w-full relative top-[280rem];
+     @apply text-[72rem] font-semibold text-white text-center w-full relative top-[205rem];
      letter-spacing: .4%;
   }
 
   @media screen and (width >= 1920px) {
-     @apply text-[72px] font-semibold text-white text-center w-full absolute top-[350px] left-1/2 -translate-1/2 z-3 ml-0;
+     @apply text-[72px] font-semibold text-white text-center w-full absolute top-[294px] left-1/2 -translate-1/2 z-3 ml-0;
   }
 }
 .location__description_text {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full relative top-[348rem] z-5;
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full relative top-[358rem] z-5;
 
 
   @media screen and (width >= 640px) {
-    @apply text-[36rem] font-normal text-white text-center w-full relative top-[300rem];
+    @apply text-[36rem] font-normal text-white text-center w-full relative top-[226rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[36px] font-normal text-white text-center leading-[110%] w-full  absolute top-[510px] left-1/2 -translate-1/2 z-3 ml-0;
+    @apply text-[36px] font-normal text-white text-center leading-[110%] w-full  absolute top-[454px] left-1/2 -translate-1/2 z-3 ml-0;
   }
 }
 .location__title_text__bottom {
    @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative z-3 mt-[705rem];
 
   @media screen and (width > 640px) {
-   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full mt-[704rem];
+   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full mt-[640rem];
   }
 
   @media screen and (width >= 1920px) {
-   @apply text-[72px] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1074px] left-1/2 -translate-x-1/2 z-[3];
+   @apply text-[72px] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1104px] left-1/2 -translate-x-1/2 z-[3];
   }
 }
 .location__description_text__bottom {
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full relative z-3 mt-[6rem];
 
   @media screen and (width > 640px) {
-    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full mt-[20rem];
+    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full mt-[21rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[36px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[946px] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[36px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[976px] left-1/2 -translate-x-1/2 z-[3];
   }
 }

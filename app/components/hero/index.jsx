@@ -22,10 +22,17 @@ const Hero = ({ handleToggle }) => {
           </div>
           <div className={styles.hero__bg_desktop}>
             <Image
+              src="/building-large.avif"
+              alt="sarmizegetusa building"
+              fill
+              className="object-cover"
+            />
+            {/* <Image
               src="/building-desktop.avif"
               alt="sarmizegetusa building"
               fill
-            />
+            /> */}
+
           </div>
           <div className={styles.hero__bg_large}>
             <Image
@@ -70,14 +77,14 @@ const Hero = ({ handleToggle }) => {
             fill
             className={`${styles.location__wrapper_bg__mobile} object-cover`}
           />
-          <Image
-            src={"/location-bg-laptop.avif"}
+           <Image
+            src={"/location-bg-large.avif"}
             alt="sarmizegetusa location background"
             loading="eager"
             fill
-            className={`${styles.location__wrapper_bg__laptop} object-cover mt-[-260rem]`}
+            className={`${styles.location__wrapper_bg__laptop} object-cover`}
           />
-          <Image
+         <Image
             src={"/location-bg-large.avif"}
             alt="sarmizegetusa location background"
             loading="eager"

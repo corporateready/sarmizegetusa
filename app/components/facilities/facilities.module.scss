@@ -5,10 +5,10 @@
   font-family: "Montserrat", sans-serif;
 
   @media screen and (width > 640px) {
-    @apply mt-[-110rem];
+    @apply mt-[-136rem];
   }
   @media screen and (width >= 1920px) {
-    @apply w-full h-auto mt-[24px];
+    @apply w-full h-auto mt-0;
   }
 
   &::before {
@@ -32,7 +32,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-full absolute top-[-184px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem] leading-[105%];
+    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-full absolute top-[-180px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem] leading-[105%];
   }
 }
 .facilities__inner {
@@ -43,7 +43,7 @@
     }
 
     @media screen and (width >= 1920px) {
-      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-162px];
+      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-176px];
     }
 }
 .facilities__item {
