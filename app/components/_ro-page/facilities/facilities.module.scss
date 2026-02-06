@@ -1,0 +1,68 @@
+@reference "tailwindcss";
+
+.facilities {
+  @apply w-full h-full relative mt-[-80rem] z-[0];
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (width >= 640px) {
+    @apply mt-[-42rem];
+  }
+
+  &::before {
+    content: '';
+    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[48rem] left-0 z-[1];
+
+    @media screen and (min-width: 641px) {
+     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[-390rem] left-0 z-[1];
+    }
+
+    @media screen and (width >= 1920px) {
+     @apply inline-block w-[1920px] h-[760px] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[120px] left-1/2 -translate-x-1/2 z-[1] mt-[-420px];
+    }
+  }
+}
+.facilities__title {
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-fit relative top-[16rem] left-1/2 -translate-x-1/2 z-[1];
+
+  @media screen and (min-width: 641px) {
+    @apply text-[74rem] leading-[100%] top-[-369rem] z-[1] ml-[10rem] tracking-[-1rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[72px] absolute top-[-188px] ml-0 tracking-[-1rem];
+  }
+}
+.facilities__inner {
+  @apply w-full h-full flex flex-col items-center justify-center gap-[20rem] px-[38rem] pt-0 mt-[54rem];
+
+    @media screen and (min-width: 641px) {
+    @apply w-[1198rem] h-full flex flex-row items-center justify-center gap-[18rem] px-0 mx-auto mt-[-286rem];
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-113px];
+    }
+}
+.facilities__item {
+  @apply w-full h-[440rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-full h-[368rem] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  }
+
+   @media screen and (width >= 1920px) {  
+    @apply w-full h-[366px];
+  }
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
+
+    @media screen and (min-width: 641px) {
+     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
+    }
+
+    @media screen and (width >= 1920px) {
+     @apply text-[22px] font-medium text-white leading-[24px] w-full absolute top-[18px] left-[26px] z-[2];
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@reference "tailwindcss";
+
+.hero__form {
+  @apply w-full min-h-dvh fixed top-0 left-0 z-10;
+  
+  backdrop-filter: blur(6rem);
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  
+  font-family: "Montserrat", sans-serif;
+} 
+.form__wrapper {
+  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+
+  @media screen and (min-width: 641px) {
+     @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  }
+
+  @media screen and (width >= 1920px) {
+     @apply w-[662px] h-[666px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  }
+
+  @media screen and (min-width: 641px) and (max-height: 800px) {
+    @apply scale-[90%];
+  }
+
+  @media screen and (min-width: 1441px) and (max-height: 1000px) {
+    @apply scale-[90%];
+  }
+
+  @media screen and (min-width: 1900px) and (max-height: 1100px) {
+    @apply scale-[90%];
+  }
+}
+.hero__form_inner {
+   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[url('/shared/form-bg-mobile.avif')] bg-cover bg-center px-[14rem];
+   overflow: visible;
+
+  @media screen and (min-width: 641px) {
+   @apply w-[650rem] h-[620rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[650px] h-[620px] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
+  }
+}
+.hero__form_title {
+  @apply text-[25rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
+
+    @media screen and (min-width: 641px) {
+    @apply text-[36rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[50rem];
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply text-[33px] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[42px];
+    }
+}
+.hero__form_content {
+  @apply w-full h-full mt-[24rem] mx-auto flex flex-col gap-[17rem];
+
+  @media screen and (min-width: 641px) {
+   @apply w-[524rem] h-full mt-[41rem] mx-auto flex flex-col gap-[28rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[524px] h-full mt-[51px] mx-auto flex flex-col gap-[28px];
+  }
+
+  input {
+    @apply w-full h-[43rem] text-[16px] text-black border-[1rem] border-[#494B54] rounded-full px-[19rem] py-[10rem] outline-none placeholder:text-black placeholder:text-[16px] relative z-[2] bg-white;
+
+  }
+
+ 
+
+  @media screen and (min-width: 641px) {
+    input {
+    @apply w-full h-[50rem] text-black text-[17rem] border-[1rem] border-[#494B54] px-[26rem] py-[10rem] outline-none placeholder:tracking-[16%] placeholder:text-black placeholder:text-[17rem];
+    
+    }
+  }
+
+  @media screen and (width >= 1920px) {
+    input {
+    @apply w-full h-[50px] text-[18px] border-[1px] border-[#494B54] px-[26px] py-[10px] outline-none placeholder:tracking-[16%] placeholder:text-black placeholder:text-[18px];
+    
+    }
+  }
+}
+.phone__input {
+  @apply relative z-3 bg-white rounded-full;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 48rem;
+    width: 1rem;
+    height: 100%;
+    background: #000;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply h-[50px];
+    &:before {
+      left: 48px;
+    }
+  }
+}
+.button__sparkle_1 {
+
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[8rem] h-[8rem] rounded-full absolute bottom-[76rem] left-[153rem] -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[10px] h-[10px] rounded-full absolute bottom-[76px] left-[148px] -translate-x-1/2;
+      }
+}
+.button__sparkle_2 {
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[13rem] h-[13rem] rounded-full absolute bottom-[36rem] left-1/2 -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[13px] h-[13px] rounded-full absolute bottom-[30px] left-1/2 -translate-x-1/2;
+      }
+}
+.button__sparkle_3 {
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[11rem] h-[11rem] rounded-full absolute bottom-[47rem] right-[178rem] -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[11px] h-[11px] rounded-full absolute bottom-[150px] right-[188px] -translate-x-1/2;
+      }
+}
+.button__sparkle_4 {
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+@apply w-[11rem] h-[11rem] rounded-full absolute bottom-[150rem] right-[188rem] -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[15px] h-[15px] rounded-full absolute bottom-[50px] right-[178px] -translate-x-1/2;
+      }
+}
+.hero__form_close_button {
+  @apply w-[22rem] h-[22rem] absolute right-[-6rem] top-[-32rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer;
+
+  @media screen and (min-width: 641px) {
+    @apply w-[24rem] h-[24rem] absolute right-[-4rem] top-[-36rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[24px] h-[24px] absolute right-0 top-[-36px] -translate-x-1/2 z-[5] sm:hover:cursor-pointer;
+  }
+}

@@ -1,0 +1,380 @@
+@reference "tailwindcss";
+
+.letter {
+  @apply w-full h-[676rem] bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-no-repeat bg-center relative mt-[-216rem] mb-[120rem] z-[-1];
+  overflow-y: hidden;
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (width >= 640px) {
+    @apply w-full h-[1316rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-full h-[1174px] mt-[-330px] mb-[114px] bg-contain;
+  }
+
+  &::before {
+    content: '';
+     @apply w-[358rem] h-[210rem] bg-[url('/letter/up-letter.png')] bg-cover bg-center bg-no-repeat ml-0 absolute bottom-0 left-1/2 -translate-x-1/2 z-4;
+    
+     @media screen and (width >= 640px) {
+      @apply w-[830rem] h-[495rem] ml-[10rem];
+    }
+
+     @media screen and (width >= 1920px) {
+      @apply w-[740px] h-[480px] ml-[10px] bottom-[-10px];
+    }
+
+  }
+
+   .letter__star_animate__1 {
+    @apply w-[14rem] h-[14rem] rounded-full inline-flex absolute top-[294rem] left-[336rem] -translate-x-1/2 z-4;
+    animation: blinking 3s ease-in-out infinite;
+      -webkit-animation: blinking 3s ease-in-out infinite;
+      -moz-animation: blinking 3s ease-in-out infinite;
+      -o-animation: blinking 3s ease-in-out infinite;
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      -o-animation-delay: 2s;
+      
+        @keyframes blinking {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              25%, 30% {
+                  transform: scale(1.5);
+              }
+              75%, 50% {
+                  transform: scale(1.5);
+              }
+              100%, 50% {
+                  transform: scale(1);
+              }
+          }
+
+    background: content-box radial-gradient(
+          circle at center,
+          #ffffff 0%,
+          #fff5ec 5%,
+          #FFCDA2 10%,
+          #F5B780 15%,
+          #C79468 17%,
+          #9C7451 22%,
+          transparent 50%
+        );
+
+        @media screen and (width >= 640px) {
+          @apply w-[20rem] h-[20rem] top-[547rem] left-[300rem];
+        }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[20px] h-[20px] top-[487px] left-[778px];
+      }
+  }
+
+  .letter__star_animate__2 {
+    @apply w-[12rem] h-[12rem] rounded-full inline-flex absolute top-[420rem] left-[390rem] -translate-x-1/2 z-4;
+    animation: blinking 3s ease-in-out infinite;
+      -webkit-animation: blinking 3s ease-in-out infinite;
+      -moz-animation: blinking 3s ease-in-out infinite;
+      -o-animation: blinking 3s ease-in-out infinite;
+      animation-delay: 3s;
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      -o-animation-delay: 3s;
+      
+        @keyframes blinking {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              25%, 30% {
+                  transform: scale(1.5);
+              }
+              75%, 50% {
+                  transform: scale(1.5);
+              }
+              100%, 50% {
+                  transform: scale(1);
+              }
+          };
+
+    background: content-box radial-gradient(
+          circle at center,
+          #ffffff 0%,
+          #fff5ec 5%,
+          #FFCDA2 10%,
+          #F5B780 15%,
+          #C79468 17%,
+          #9C7451 22%,
+          transparent 50%
+        );
+
+        @media screen and (width >= 640px) {
+          @apply w-[20rem] h-[20rem] top-[740rem] left-[383rem];
+        }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[20px] h-[20px] top-[696px] left-[670px];
+      }
+  }
+
+  .letter__star_animate__3 {
+    @apply w-[20rem] h-[20rem] rounded-full inline-flex absolute top-[254rem] left-[86rem] -translate-x-1/2 z-4;
+    animation: blinking 3s ease-in-out infinite;
+      -webkit-animation: blinking 3s ease-in-out infinite;
+      -moz-animation: blinking 3s ease-in-out infinite;
+      -o-animation: blinking 3s ease-in-out infinite;
+      animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      -o-animation-delay: 1s;
+      
+        @keyframes blinking {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              25%, 30% {
+                  transform: scale(1.5);
+              }
+              75%, 50% {
+                  transform: scale(1.5);
+              }
+              100%, 50% {
+                  transform: scale(1);
+              }
+          }
+
+    background: content-box radial-gradient(
+          circle at center,
+          #ffffff 0%,
+          #fff5ec 5%,
+          #FFCDA2 10%,
+          #F5B780 15%,
+          #C79468 17%,
+          #9C7451 22%,
+          transparent 50%
+        );
+
+         @media screen and (width >= 640px) {
+          @apply w-[20rem] h-80 top-2028 left-3440;
+        }
+
+      @media screen and (width >= 1920px) {
+      @apply w-[20px] h-[20px] top-[418px] left-[1166px];
+      }
+  }
+
+  .letter__star_animate__4 {
+    @apply w-[12rem] h-[12rem] rounded-full inline-flex absolute top-[336rem] left-[72rem] -translate-x-1/2 z-4;
+    animation: blinking 3s ease-in-out infinite;
+      -webkit-animation: blinking 3s ease-in-out infinite;
+      -moz-animation: blinking 3s ease-in-out infinite;
+      -o-animation: blinking 3s ease-in-out infinite;
+      
+        @keyframes blinking {
+              0%, 100% {
+                  transform: scale(1);
+              }
+              25%, 30% {
+                  transform: scale(1.5);
+              }
+              75%, 50% {
+                  transform: scale(1.5);
+              }
+              100%, 50% {
+                  transform: scale(1);
+              }
+          };
+
+    background: content-box radial-gradient(
+          circle at center,
+          #ffffff 0%,
+          #fff5ec 5%,
+          #FFCDA2 10%,
+          #F5B780 15%,
+          #C79468 17%,
+          #9C7451 22%,
+          transparent 50%
+        );
+
+        @media screen and (width >= 640px) {
+          @apply w-[20rem] h-[20rem] top-[834rem] left-[1077rem];
+        }
+
+      @media screen and (width >= 1920px) {
+      @apply w-[20px] h-[20px] top-[710px] left-[1250px];
+      }
+  }
+  
+}
+.letter__body {
+  @apply w-[310rem] h-[590rem] bg-[#962805]/90 absolute top-[646rem] left-1/2 -translate-1/2 z-1;
+
+  @media screen and (width >= 640px) {
+    @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[940rem] left-1/2 -translate-1/2 z-1;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[510px] h-[582px] bg-[#962805] absolute top-[870px] left-1/2 -translate-1/2 z-1;
+  }
+
+  &::after {
+    content: '';
+    @apply inline-block  w-[510rem] h-[470rem] rounded-full absolute top-[-130rem] left-1/2 -translate-x-1/2 z-1 bg-[url('/letter/letter-light.avif')] bg-cover bg-top object-cover bg-no-repeat;
+
+    @media screen and (width >= 640px) {
+      @apply  w-[960rem] h-[870rem] top-[-250rem];
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply  w-[800px] h-[700px] top-[-200px];
+    }
+
+  }
+}
+.letter__logo {
+  @apply w-[86rem] h-[17rem] absolute top-[40rem] left-1/2 -translate-1/2 z-[2];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-[170rem] h-[34rem] absolute top-[88rem];
+  }
+
+  @media screen and (width >= 1920px) {  
+    @apply w-[154px] h-[32px] absolute top-[66px];
+  }
+}
+.letter__title {
+  @apply text-[26rem] text-white font-semibold leading-[90%] absolute top-[64rem] left-0 text-center w-full z-2;
+
+    @media screen and (width >= 640px) {
+      @apply text-[46rem] top-[154rem];
+    }
+
+    @media screen and (width >= 1920px) {  
+      @apply text-[44px] top-[124px];
+    }
+}
+.letter__description {
+  @apply text-[8rem] text-white font-normal leading-[112%] absolute top-[122rem] left-0 text-center w-full z-2;
+
+  @media screen and (width >= 640px) {
+    @apply text-[14rem] leading-[115%] top-[250rem];
+  }
+
+  @media screen and (width >= 1920px) {  
+    @apply text-[14px] leading-[112%] top-[218px];
+  }
+}
+.letter__button_access {
+  @apply text-white text-[18.8rem] font-medium leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[714rem] left-1/2 -translate-x-1/2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3%;
+  background: linear-gradient(
+    0deg,
+    #060915 40%,
+    #50525B 100%,
+    #FFF 100%,
+  );
+
+  &::before {
+    @apply rounded-full;
+    content: '';
+    position: absolute;
+    inset: -4rem;
+    padding: 5rem;
+    background: conic-gradient(
+      from var(--angle),
+      transparent 70%,
+      #fff 150%,
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+//  box-shadow: 
+//     0 0 3rem rgba(255, 255, 255, .1),
+//     0 0 1rem rgba(255, 255, 255, .1);
+  
+
+    animation: rotate 3s linear infinite ;
+
+    pointer-events: none;
+
+    @keyframes rotate {
+    
+    to {
+      --angle: 360deg;
+    }
+  }
+}
+
+  @media screen and (min-width: 641px) {
+  @apply text-white text-[30rem] leading-[100%] w-[584rem] h-[78rem] border-[1rem] z-[4] top-[1154rem] hover:cursor-pointer;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(
+      0deg,
+      #060915 40%,
+      #50525B 100%,
+      #FFF 100%,
+    );
+
+  }
+  @media screen and (width >= 1920px) {
+    @apply text-[27px] leading-[100%] w-[564px] h-[68px] border-[1px] z-[4] top-[1042px] hover:cursor-pointer;
+  }
+  .button__detail_sparkle_left {
+  @apply w-0 h-0;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[13rem] h-[13rem] rounded-full absolute top-[-47rem] left-[60rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[13px] h-[13px] rounded-full absolute top-[-47px] left-[60px] -translate-x-1/2;
+      }
+  }
+  .button__detail_sparkle_right {
+  @apply w-0 h-0;
+
+  
+
+      @media screen and (min-width: 641px) {
+        @apply w-[16rem] h-[16rem] rounded-full absolute bottom-[-30rem] right-[10rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[16px] h-[16px] rounded-full absolute bottom-[-30px] right-[10px] -translate-x-1/2;
+      }
+  }
+}
+

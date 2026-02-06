@@ -1,0 +1,44 @@
+.location__heart {
+  @media screen and (max-width: 640px) {
+    @apply bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[210rem] left-1/2 -translate-x-1/2 z-3 w-full h-[400rem];
+  }
+
+  animation: heartbeat 3s ease-in-out infinite;
+     -webkit-animation: heartbeat 3s ease-in-out infinite;
+     -moz-animation: heartbeat 3s ease-in-out infinite;
+     -o-animation: heartbeat 3s ease-in-out infinite;
+     animation-delay: 0s;
+     -webkit-animation-delay: 0s;
+     -moz-animation-delay: 0s;
+     -o-animation-delay: 0s;
+     
+      @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            25%, 30% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            75%, 50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100%, 50% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+
+    @media screen and (width > 640px) {
+    content: '';
+      @apply w-[800rem] h-[705rem] bg-[url('/mobile/location/location-heart.avif')] bg-contain bg-center bg-no-repeat inline-flex absolute top-[100rem] left-1/2 -translate-x-1/2 z-[3];
+
+    }
+
+    @media screen and (width >= 1920px) {
+    content: '';
+      @apply w-[690px] h-[650px] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[60px] left-1/2 -translate-x-1/2 z-[3];
+    }
+}

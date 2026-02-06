@@ -1,0 +1,16 @@
+@reference "tailwindcss";
+
+.title {
+  @apply text-white/63 text-[71rem] uppercase leading-[102%] absolute top-[120rem] left-1/2 -translate-x-1/2 z-[1];
+  letter-spacing: 9rem;
+
+  @media screen and (min-width: 641px) {
+    @apply w-max text-center text-white/63 text-[112rem] font-medium uppercase leading-none z-[1] ml-[21rem] absolute top-[215rem] left-1/2 -translate-x-1/2;
+    letter-spacing: 36.8rem;
+  }
+
+   @media screen and (width >= 1920px) {
+    @apply w-max text-center text-white text-[100px] font-medium uppercase leading-none z-[1] ml-[20px] absolute top-[202px] left-1/2 -translate-x-1/2;
+    letter-spacing: 34%;
+  }
+}

@@ -1,0 +1,26 @@
+@reference "tailwindcss";
+
+.header_navigate__lang {
+  @apply bg-none  border-white leading-0 font-semibold uppercase text-[17rem] text-white w-[52rem] h-[52rem] border-[1rem] rounded-full flex justify-center items-center relative;
+
+  @media screen and (min-width: 641px) {
+   @apply bg-none  border-[#22333F] leading-0 uppercase text-[17rem] text-[#22333F] w-[49rem] h-[42rem] rounded-[22rem] flex justify-center items-center relative cursor-pointer;
+  }
+
+}
+.header__drop_lang {
+  @apply font-normal absolute top-[44rem] left-auto z-[12] border-[1rem] bg-transparent rounded-b-full border-t-0 w-[52rem] h-[104rem];
+
+  @media screen and (min-width: 641px) {
+  @apply font-normal absolute top-[38rem] text-[#22333F] left-auto z-[2] border-[1rem] border-[#22333F] bg-transparent rounded-b-[22rem] border-t-0 w-[42rem] h-[90rem];
+  }
+
+}
+.header_navigate__lang_active {
+  @apply bg-transparent font-semibold uppercase text-[17rem] border-[1rem] border-white rounded-t-full border-b-0 text-white w-[52rem] h-[52rem] flex flex-col justify-center items-center relative z-10;
+
+  @media screen and (min-width: 641px) {
+    @apply bg-transparent font-semibold uppercase text-[18rem] text-[#22333F] border-[1rem] border-[#22333F] rounded-t-[22rem] border-b-0 text-white w-[49rem] h-[42rem] flex flex-col justify-center items-center relative z-0 cursor-pointer;
+  }
+  
+}

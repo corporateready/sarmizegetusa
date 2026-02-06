@@ -1,0 +1,81 @@
+@reference "tailwindcss";
+
+.header {
+  @apply pt-[40rem] pl-[30rem] pr-[36rem] relative;
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-auto pt-220 pl-0 pr-0 absolute top-0 left-0 z-1;
+  }
+}
+
+.container {
+  @media screen and (max-width: 640px) {
+    @apply w-full h-full;
+  }
+  
+  @media screen and (min-width: 641px) {
+    @apply w-5256 h-full mx-auto;
+  }
+}
+
+.inner {
+  @media screen and (max-width: 640px) {
+    @apply w-full h-full flex items-center justify-between; 
+  }
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-full flex items-center justify-between;
+  }
+}
+
+.logo {
+ @apply w-[130rem] h-[27rem];
+
+  @media screen and (min-width: 641px) {
+    @apply w-[212rem] h-[44rem];
+  }
+}
+
+.navigate {
+  @apply flex justify-end items-center gap-[22rem];
+
+  @media screen and (min-width: 641px) {
+    @apply w-[242rem] flex justify-center gap-[12rem];
+  }
+
+  .phone__link {
+    @apply text-[0rem] text-[#22333F] font-normal uppercase w-xl h-128 border-[0.35rem] border-white rounded-full flex items-center justify-center relative;
+
+    @media screen and (min-width: 641px) {
+     @apply text-[17rem] text-[#22333F] font-normal uppercase w-880 h-168 border-[0.6rem] border-[#22333F] rounded-[22rem] flex items-center justify-center;
+    }
+    
+  }
+}
+
+// header lang dropdown ========================================================
+.header_navigate__lang {
+  @apply bg-none  border-white leading-0 font-medium uppercase text-[10rem] text-white w-[36rem] h-[32rem] border-[0.5rem] rounded-full flex justify-center items-center relative;
+
+  @media screen and (min-width: 641px) {
+   @apply bg-none  border-[#22333F] leading-0 font-medium uppercase text-[18rem] text-[#22333F] w-[61rem] h-[42rem] border-[0.56rem] rounded-[22rem] flex justify-center items-center relative cursor-pointer;
+  }
+
+}
+.header__drop_lang {
+  @apply font-normal absolute top-[18rem] left-auto z-[12] border-[0.5rem] bg-transparent rounded-b-full border-t-0 w-[36rem] h-[74rem];
+
+  @media screen and (min-width: 641px) {
+  @apply font-normal absolute top-[38rem] left-auto z-[2] border-[0.56rem] bg-transparent rounded-b-[22rem] border-t-0 w-[50rem] h-[90rem];
+  }
+
+}
+.header_navigate__lang_active {
+  @apply bg-transparent font-semibold uppercase text-[10rem] border-[0.5rem] border-white rounded-t-full border-b-0 text-white w-[36rem] h-[32rem] flex flex-col justify-center items-center relative z-10 px-[10rem];
+
+  @media screen and (min-width: 641px) {
+    @apply bg-transparent font-semibold uppercase text-[17rem] border-[0.56rem] border-[#22333F] rounded-t-[22rem] border-b-0 text-[#22333F] w-[50rem] h-[42rem] flex flex-col justify-center items-center relative z-0 px-[10rem] cursor-pointer;
+  }
+  
+}

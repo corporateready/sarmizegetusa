@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+html {
+  @apply w-full h-full relative;
+  scroll-behavior: smooth;
+  font-size: calc(100vw / (1920 * 1));
+  @media screen and (min-width: 641px) {
+    font-size: calc(100vw / (1440 * 1));
+  }
+  @media screen and (max-width: 640px) {
+    font-size: calc(100vw / (428 * 1));
+  }
+  @media screen and (width >= 1440px) {
+   font-size: calc(100vw / (1440 * 1));
+  }
+  @media screen and (width >= 1920px) {
+    /* @apply ml-[-32rem]; */
+  }
+}
+
+body {
+  @apply w-full h-full relative mx-auto;
+  
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden !important; 
+
+  @media screen and (width >= 1920px) {
+    @supports (-webkit-hyphens:none) {
+    width: 45%;
+  } 
+  }
+}
+
+.react-international-phone-country-selector-button__dropdown-arrow {
+  @apply hidden;
+}
+.react-international-phone-country-selector-button {
+ @apply w-[50rem] h-[50rem];
+
+ &:hover {
+    background: none !important;
+  }
+
+  @media screen and (min-width: 641px) {
+    @apply w-[50rem] h-[50rem];
+  }
+}
+.react-international-phone-input {
+ background: #fff !important;
+    padding: 0 15rem !important;
+
+    @media screen and (width >= 1920px) {
+      height: 50px !important;
+    }
+}
+.react-international-phone-country-selector-button{
+  @media screen and (width >= 1920px) {
+    height: 50px !important;
+    width: 50px !important;
+  }
+}
+.react-international-phone-flag-emoji {
+  @media screen and (width >= 1920px) {
+    width: 50px !important;
+    height: 20px !important;
+  }
+}
+.react-international-phone-input-container .react-international-phone-input {
+  @media screen and (width >= 1920px) {
+    font-size: 18px !important;
+  }
+}

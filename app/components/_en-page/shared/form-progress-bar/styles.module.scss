@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+
+.hero__form_progress__wrapper {
+  @apply w-full h-[18rem] bg-white rounded-full mt-[45rem] mx-auto border-[1rem] border-[#494B54] relative overflow-hidden;
+
+     background: linear-gradient(
+        0deg,
+        #16171E 0%,
+        #353746 50%,
+        #16171E 100%
+      );
+
+  @media screen and (min-width: 641px) {
+   @apply w-[526rem] h-[18rem] mt-[54rem];
+  }
+
+  @media screen and (min-width: 1920px) {
+   @apply w-[526px] h-[18px] mt-[54px] border-[1px];
+  }
+}

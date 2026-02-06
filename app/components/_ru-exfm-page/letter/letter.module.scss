@@ -1,0 +1,192 @@
+@reference "tailwindcss";
+
+.letter {
+  @apply w-full h-[676rem] relative mt-[-210rem] mb-[120rem] z-[-1];
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-[1300rem] relative mt-[-210rem] mb-[-47rem] z-[-1];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-full h-[1180px] relative mt-[-214px] mb-[-10px] z-[-1];
+  }
+
+  &::before {
+    content: '';
+    @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-3rem] left-[3rem] z-0;
+
+    @media screen and (min-width: 641px) {
+      @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-contain bg-center bg-no-repeat absolute top-[-123rem] left-0 z-0;
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply top-[-123px];
+    }
+  }
+}
+.letter__logo {
+  @apply w-[86rem] h-[17rem] absolute top-[390rem] left-1/2 -translate-1/2 z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-[170rem] h-[34rem] absolute top-[603rem] left-1/2 -translate-1/2 z-[1];
+  }
+
+  @media screen and (width >= 1920px) {  
+    @apply w-[154px] h-[32px] absolute top-[532px] left-1/2 -translate-1/2 z-[1];
+  }
+}
+.letter__title {
+  @apply text-[26rem] text-white font-semibold leading-[100%] absolute top-[410rem] left-0 text-center w-full z-[1];
+
+    @media screen and (min-width: 641px) {
+      @apply text-[46rem] text-white font-semibold leading-none absolute top-[670rem] left-0 text-center w-full z-[1];
+    }
+
+    @media screen and (width >= 1920px) {  
+      @apply text-[42px] font-semibold leading-none absolute top-[590px] left-0 text-center w-full z-[1];
+    }
+}
+.letter__description {
+  @apply text-[8rem] text-white font-normal leading-[112%] absolute top-[471rem] left-0 text-center w-full z-[1];
+
+  @media screen and (min-width: 641px) {
+    @apply text-[14rem] text-white font-normal leading-[115%] absolute top-[769rem] left-0 text-center w-full z-[1];
+  }
+
+  @media screen and (width >= 1920px) {  
+    @apply text-[13px] font-normal leading-[112%] absolute top-[688px] left-0 text-center w-full z-[1];
+  }
+}
+.letter__button_access {
+  @apply text-white text-[18rem] font-semibold leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[707rem] left-1/2 -translate-x-1/2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3%;
+  background: linear-gradient(
+    0deg,
+    #060915 40%,
+    #50525B 100%,
+    #FFF 100%,
+  );
+
+  &::before {
+    @apply rounded-full;
+    content: '';
+    position: absolute;
+    inset: -4rem;
+    padding: 5rem;
+    background: conic-gradient(
+      from var(--angle),
+      transparent 70%,
+      #fff 150%,
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: rotate 3s linear infinite ;
+
+    pointer-events: none;
+
+    @keyframes rotate {
+    
+    to {
+      --angle: 360deg;
+    }
+  }
+}
+
+  @media screen and (min-width: 641px) {
+  @apply text-white text-[30rem] leading-[100%] w-[574rem] h-[78rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1035rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0%;
+    background: linear-gradient(
+      0deg,
+      #060915 40%,
+      #50525B 100%,
+      #FFF 100%,
+    );
+
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[30px] leading-[100%] w-[584px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[923px] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  }
+
+  .button__detail_sparkle_left {
+  @apply w-0 h-0;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[13rem] h-[13rem] rounded-full absolute top-[-47rem] left-[60rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[13px] h-[13px] rounded-full absolute top-[-47px] left-[60px] -translate-x-1/2;
+      }
+  }
+
+  .button__detail_sparkle_right {
+  @apply w-0 h-0;
+
+  
+
+      @media screen and (min-width: 641px) {
+        @apply w-[16rem] h-[16rem] rounded-full absolute bottom-[-30rem] right-[10rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[16px] h-[16px] rounded-full absolute bottom-[-30px] right-[10px] -translate-x-1/2;
+      }
+  }
+
+}
+.oferta__text {
+  @apply text-[9rem] sm:text-[16rem] text-center leading-[100%] w-full text-white font-normal absolute bottom-[-102rem] sm:bottom-[154rem] left-1/2 -translate-x-1/2 z-[4];
+
+  @media screen and (width >= 1920px) {
+    @apply text-[14px] bottom-[156px] left-1/2 -translate-x-1/2 z-[4];
+  }
+  
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  span {
+    @apply font-semibold text-white;
+  }
+}

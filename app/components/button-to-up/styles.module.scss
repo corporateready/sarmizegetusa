@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.letter__button_up {
+  @apply w-[30rem] h-[30rem] border border-white rounded-full flex items-center justify-center absolute z-[1] bottom-[4em] right-[-14rem] -translate-x-1/2;
+
+  @media screen and (min-width: 641px) {
+    @apply w-[80rem] h-[80rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] bottom-0 right-[-44rem] -translate-x-1/2;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[80px] h-[80px] bottom-[-10px] right-[-34px];
+  }
+}
+.letter__button_up_icon {
+  @apply w-[8rem] h-[15rem];
+
+  @media screen and (width > 640px) {
+    @apply w-[20rem] h-[42rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[26px] h-[40px];
+  }
+}
