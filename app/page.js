@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Hero from "./components/hero";
-import Letter from "./components/letter";
-import Footer from "./components/footer";
-import HeroForm from "./components/hero-form";
-import HeroFormBottom from "./components/hero-form-bottom";
+import Hero from "./components/ro-page/hero";
+import Letter from "./components/ro-page/letter";
+import Footer from "./components/ro-page/footer";
+import HeroForm from "./components/ro-page/hero-form";
+import HeroFormBottom from "./components/ro-page/hero-form-bottom";
 import styles from "./styles.module.scss"
 import { motion } from "motion/react";
 import {usePathname} from "next/navigation";
@@ -19,14 +19,6 @@ export default function Home() {
     }
     
   }, [path]);
-
-  // React.useEffect(() => {
-  //   if (isExfm) {
-  //     document.body.style.backgroundColor = "#070b1b";
-  //   } else {
-  //     document.body.style.backgroundColor = "#060916";
-  //   }
-  // }, [isExfm]);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [isOpenBottom, setIsOpenBottom] = React.useState(false);

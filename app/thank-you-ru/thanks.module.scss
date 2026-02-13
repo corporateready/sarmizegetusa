@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+.thanks_overflow {
+  @apply w-full min-h-dvh h-dvh relative top-0 left-0 z-0 flex flex-col before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('/exfm/exfm-thanks-bg-mobile.avif')] before:bg-cover before:bg-center before:bg-no-repeat;
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-full relative top-0 left-0 z-0 flex flex-col before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:min-h-dvh before:bg-[url('/exfm/exfm-thanks-bg.avif')] before:bg-cover before:bg-center before:bg-no-repeat;
+  }
+}
+.thanks {
+  @apply w-full h-full relative top-0 left-0 z-0 flex flex-col justify-between;
+  font-family: "Montserrat", sans-serif;
+
+}

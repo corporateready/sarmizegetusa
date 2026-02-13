@@ -1,0 +1,74 @@
+@reference "tailwindcss";
+
+.footer {
+  @apply w-full h-auto bg-[#0D101D] px-[37rem] py-[26rem] overflow-y-hidden;
+  font-family: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 641px) {
+   @apply w-full h-auto bg-[#0D101D] px-0 pb-[28rem] pt-[36rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-full h-auto bg-[#0D101D] px-0 pb-[60px] pt-[30px];
+  }
+}
+.footer__inner {
+  @apply w-full h-full flex flex-col gap-[26rem] relative;
+
+  @media screen and (min-width: 641px) {
+    @apply  w-[1230rem] h-full flex flex-col gap-[80rem] mx-auto;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[1200px] gap-[50px];
+  }
+}
+.footer__inner_top {
+  @apply w-full h-full flex justify-end items-center;
+}
+.footer__inner_top__links {
+  @apply flex items-center gap-[6rem];
+
+  @media screen and (min-width: 641px) {
+    @apply flex items-center gap-[10rem];
+  }
+}
+.footer__inner_bottom {
+  @apply w-full h-full flex flex-col gap-[8rem];
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-full flex flex-col gap-[11rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply gap-[10px];
+  }
+}
+.footer__inner_bottom__text {
+  @apply text-[10rem] text-[#9E9FA5] font-normal leading-[100%] w-full;
+
+  @media screen and (min-width: 641px) {
+   @apply text-[16rem] text-[#9E9FA5] font-medium leading-[100%] w-full text-left;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[16px] font-medium;
+  }
+}
+.footer__inner_bottom__links {
+   @apply text-[10rem] text-[#9E9FA5] font-normal leading-[100%] w-full flex gap-[22rem];
+
+   @media screen and (min-width: 641px) {
+   @apply text-[16rem] text-[#9E9FA5] font-medium leading-[100%] w-full flex justify-start gap-[20rem];
+   
+   @media screen and (width >= 1920px) {
+    @apply text-[16px] gap-[20px] font-medium;
+  }
+   }
+}
+.footer__social_i {
+  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30;
+  @media screen and (width >= 1920px) {
+    @apply w-[60px] h-[60px];
+  }
+}

@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+.phone__link {
+    @apply text-[0rem] text-white font-normal uppercase w-[45rem] h-[45rem] border-[1rem] border-white rounded-full flex items-center justify-center relative;
+
+    @media screen and (min-width: 641px) {
+     @apply text-[17rem] font-normal uppercase w-[182rem] h-[45rem] border-[0.6rem] rounded-[22rem] flex items-center justify-center;
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply w-[182px] h-[44px] text-[17px];
+    }
+    
+  }

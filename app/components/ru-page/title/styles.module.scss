@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.title {
+  @apply text-white/60 text-[54rem] font-medium uppercase leading-[120%] absolute top-[124rem] left-1/2 -translate-x-1/2 z-[1] ml-[12rem] tracking-[0.33em];
+
+  @media screen and (width >= 640px) {
+    @apply w-full text-center text-white/63 text-[103rem] font-medium uppercase leading-none z-[1] absolute top-[158rem] left-[50%] -translate-x-[50%] ml-[19rem];
+  }
+
+   @media screen and (width >= 1920px) {
+    @apply text-center text-white text-[91px] font-medium uppercase leading-none z-[1] ml-[20px] absolute top-[208px] left-1/2 -translate-x-1/2;
+  }
+}

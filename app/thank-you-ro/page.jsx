@@ -1,8 +1,8 @@
 
 "use client";
 import React from "react";
-import Header from "../components/header-thanks";
-import Footer from "../components/footer-thanks";
+import Header from "../components/ro-page/header-thanks";
+import Footer from "../components/ro-page/footer-thanks";
 import styles from "../thanks.module.scss";
 import { motion } from "motion/react";
 
