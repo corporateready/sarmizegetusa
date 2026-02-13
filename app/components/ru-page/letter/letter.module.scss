@@ -5,7 +5,7 @@
   font-family: "Montserrat", sans-serif;
 
   @media screen and (width > 640px) {
-    @apply w-full h-[1300rem] relative mt-[-220rem] mb-[-25rem] z-[-1];
+    @apply w-full h-[1310rem] relative mt-[-220rem] mb-[-25rem] z-[-1];
   }
 
   @media screen and (width >= 1920px) {
@@ -29,22 +29,22 @@
   @apply text-[22rem] text-white font-semibold leading-[110%] absolute top-[414rem] left-0 text-center w-full z-[1];
 
     @media screen and (min-width: 641px) {
-      @apply text-[40rem] text-white font-semibold leading-[110%] absolute top-[632rem] left-0 text-center w-full z-[1];
+      @apply text-[40rem] text-white font-semibold leading-[110%] absolute top-[658rem] text-center w-full z-[1] ml-[6rem];
     }
 
     @media screen and (width >= 1920px) {  
-      @apply text-[36px] font-semibold absolute top-[563px] left-0 text-center w-full z-[1];
+      @apply text-[36px] font-semibold absolute top-[566px] text-center w-full z-[1] ml-[6px];
     }
 }
 .letter__description {
   @apply text-[14rem] text-white font-normal leading-[110%] absolute top-[469rem] left-0 text-center w-full z-[1];
 
   @media screen and (min-width: 641px) {
-    @apply text-[20rem] text-white font-normal absolute top-[744rem] left-0 text-center w-full z-[1];
+    @apply text-[20rem] text-white font-normal absolute top-[756rem] left-0 text-center w-full z-[1] ml-[4rem];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply text-[20px] font-normal leading-[110%] absolute top-[652px] left-0 text-center w-full z-[1];
+    @apply text-[20px] font-normal leading-[110%] absolute top-[655px] left-0 text-center w-full z-[1] ml-[7px];
   }
 }
 .letter__button_access {
@@ -90,8 +90,8 @@
   }
 }
 
-  @media screen and (width > 640px) {
-  @apply text-white text-[30rem] leading-[100%] w-[732rem] h-[78rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1025rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  @media screen and (width >= 640px) {
+  @apply text-white text-[30rem] leading-[100%] w-[732rem] h-[76rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1035rem] hover:cursor-pointer ml-[9rem];
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0%;
     background: linear-gradient(
@@ -104,7 +104,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[30px] leading-[100%] w-[700px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[923px] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+    @apply text-[30px] leading-[100%] w-[700px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[923px] hover:cursor-pointer ml-[9px];
   }
 
   .button__detail_sparkle_left {

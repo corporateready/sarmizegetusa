@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./letter.module.scss";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 
 const Index = ({ handleToggleModalBottom }) => {
   return (
