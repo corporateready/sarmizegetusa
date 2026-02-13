@@ -12,11 +12,11 @@ const Index = ({ handleToggleModalBottom }) => {
       className={styles.letter}
     >
       <p className={styles.letter__title}>
-        Узнайте о доступных
+        Узнай о доступных
         <br />вариантах приобретения
       </p>
       <p className={styles.letter__description}>
-        Запросите первичную информацию
+        Запроси первичную информацию
         <br />о проекте и условиях оплаты
         <br />на старте продаж
       </p>

@@ -58,7 +58,7 @@ const Hero = ({ handleToggle }) => {
           </span>
         </p>
         <button className={styles.button__detail} onClick={handleToggle}>
-          <span className={styles.button__detail__text}>Узнайте подробности</span>
+          <span className={styles.button__detail__text}>Узнай подробности</span>
           <span className={styles.button__detail__line_bottom}></span>
           <span className={styles.button__detail__sparkle}></span>
           <span className={styles.button__detail__sparkle_2}></span>
@@ -96,7 +96,7 @@ const Hero = ({ handleToggle }) => {
           />
         <HeartAnimate />
         <p className={styles.location__title_text}>
-          Живите в локации
+          Живи в локации
           <br />без аналогов
         </p>
         <p className={styles.location__description_text}>

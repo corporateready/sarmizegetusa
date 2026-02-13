@@ -7,58 +7,136 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import { v4 as uuidv4 } from "uuid";
+
+const PIXEL_ID = process.env.NEXT_PUBLIC_PIXEL_ID;
 
 const Index = ({ handleToggleModalBottom }) => {
-  const router = useRouter();
-
-  const isMobile = useMediaQuery({
-    query: "(max-width: 640px)",
-  });
-
-  const isLarge = useMediaQuery({
-    query: "(max-width: 1920px)",
-  });
-
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
-  const [isDisabled, setIsDisabled] = React.useState(false);
-
-  const handleChangeName = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleChangePhone = (value) => {
-    let cleanedValue = value.replace(/^\+0+/, "+3730");
-    cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
-
-    setPhone(cleanedValue);
-  };
-
-   React.useEffect(() => {
-     if (name.length >= 3 && email.match("@") && phone.length >= 12) {
-       setIsDisabled(true);
-     }
-   }, [name, email, phone, isDisabled]);
-
-  const formSubmitTrack = () => {
+   const router = useRouter();
+    const eventIdGen = uuidv4();
+    const formSubmittedEventId = uuidv4();
+  
+    const isMobile = useMediaQuery({
+      query: "(max-width: 640px)",
+    });
+  
+    const isLarge = useMediaQuery({
+      query: "(max-width: 1920px)",
+    });
+  
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+    const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+    const [isDisabled, setIsDisabled] = React.useState(false);
+  
+    const [userLocation, setUserLocation] = React.useState("");
+    const [isEventId, setIsEventId] = React.useState("");
+    const [isFBP, setIsFBP] = React.useState("");
+    const [isFBC, setIsFBC] = React.useState("");
+    const [isPageViewEventId, setIsPageViewEventId] = React.useState("");
+    const [isFormSubmittedEventId, setIsFormSubmittedEventId] =
+      React.useState("");
+      
+    const [isExternalId, setIsExternalId] = React.useState("");
+    const [isIP, setIP] = React.useState(null);
+  
+    React.useEffect(() => {
+      const getClientLocation = async () => {
+        const res = await fetch("https://ipinfo.io/json");
+        const locationData = await res.json();
+        if (locationData) {
+          setUserLocation(locationData.city);
+          setIP(locationData.ip);
+        }
+      };
+  
+      getClientLocation();
+    }, []);
+  
+    React.useEffect(() => {
+      const pvei = localStorage.getItem("pageview_event_id");
+      const ei = localStorage.getItem("external_id");
+  
+      if (typeof window !== "undefined") {
+        setIsPageViewEventId(pvei);
+        setIsExternalId(ei);
+      }
+    }, []);
+  
+     React.useEffect(() => {
+      const fbp = Cookies.get("_fbp");
+      setIsEventId(eventIdGen);
+      setIsFBP(fbp);
+    }, []);
+  
+    React.useEffect(() => {
+      if (typeof window.fbq !== "undefined") {
+        window.fbq("init", PIXEL_ID);
+      }
+      const fbc = Cookies.get("_fbc");
+      setIsFBC(fbc)
+    }, []);
+  
+    const formSubmitTrack = () => {
+      if (typeof window !== "undefined" && typeof window.fbq !== "undefined") {
+        window.fbq(
+          "track",
+          "Lead",
+          {},
+          {
+            eventID: isFormSubmittedEventId,
+            fbc: isFBC,
+            em: email,
+            ph: phone,
+            fn: name,
+            ct: userLocation,
+            ip: isIP,
+            pageview_event_id: isPageViewEventId,
+            external_id: isExternalId,
+          },
+        );
+      }
+  
       if (typeof window !== "undefined" && window.posthog)
         window.posthog.capture("form_submitted", {
-          name: name,
-          phone: phone,
+          fbc: isFBC,
+          fbp: isFBP,
           email: email,
+          phone: phone,
+          name: name,
+          pageview_event_id: isPageViewEventId,
+          external_id: isExternalId,
+          form_submitted_event_id: isFormSubmittedEventId,
         });
-
+  
       if (!isFormSubmitted) {
         setIsFormSubmitted(true);
-        router.push("/thank-you-ro");
+        router.push("/thank-you-ru");
       }
-  };
+    };
+    
+    const handleChangeName = (e) => {
+      setName(e.target.value);
+    };
+  
+    const handleChangeEmail = (e) => {
+      setEmail(e.target.value);
+    };
+  
+    const handleChangePhone = (value) => {
+      let cleanedValue = value.replace(/^\+0+/, "+3730");
+      cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
+  
+      setPhone(cleanedValue);
+    };
+  
+    React.useEffect(()=>{
+      if(name.length >= 3 && email.match("@") && phone.length >= 12) {
+        setIsDisabled(true);
+      }
+    }, [name,email, phone, isDisabled])
 
   return (
     <motion.div

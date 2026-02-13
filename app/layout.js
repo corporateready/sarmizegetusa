@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import GoogleTagManager from "./components/GoogleTagManager"
 
 export const metadata = {
   title: "Un nou ansamblu rezidențial în inima sectorului Botanica",
@@ -15,12 +16,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const GTM_ID = "GTM-N59S3XBQ";
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <meta name="robots" content="index, follow" />
         <meta
           name="viewport"
@@ -60,6 +62,18 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
+        {/* <GoogleTagManager gtmId={GTM_ID} />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+            <iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
+                    height="0" 
+                    width="0" 
+                    style="display:none;visibility:hidden">
+            </iframe>
+            `,
+          }}
+        /> */}
       </head>
       <body className={`bg-[#060916] antialiased`}>
         {children}
