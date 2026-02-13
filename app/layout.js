@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-        {/* <GoogleTagManager gtmId={GTM_ID} />
+        <GoogleTagManager gtmId={GTM_ID} />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
             </iframe>
             `,
           }}
-        /> */}
+        />
       </head>
       <body className={`bg-[#060916] antialiased`}>
         {children}
