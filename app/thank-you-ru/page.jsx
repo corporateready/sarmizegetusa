@@ -24,15 +24,16 @@ const page = () => {
             </h2>
             <p className="text-[26rem] sm:text-[30rem] text-[#86878B] font-normal leading-[120%] sm:leading-180 mt-[3dvh] sm:mt-[4vh] text-center sm:text-left">
               Ваша заявка успешно {""}
-              <br />
+              <br className="inline-block sm:hidden"/>
               зарегистрирована.
               <span className="block mt-[2.2vh] sm:mt-0">
                 В ближайшее время {""}
-                <br />
+                <br className="inline-block sm:hidden" />
                 менеджер свяжется с вами {""}
-                <br />
-                для предоставления всех {""}
-                <br />
+                <br className="inline-block sm:hidden"/>
+                для {""}
+                <br className="hidden sm:inline-block"/>предоставления всех {""}
+                <br className="inline-block sm:hidden"/>
                 деталей.
               </span>
             </p>
