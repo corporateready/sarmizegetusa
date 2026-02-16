@@ -15,7 +15,7 @@ const Index = () => {
           fill="white"
         />
       </svg>
-      +373 76 039 073
+      
     </a>
   );
 }

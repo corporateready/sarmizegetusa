@@ -10,10 +10,10 @@
         #16171E 100%
       );
 
-  &::before {
-    @apply content-[''] w-full h-[20rem] bg-[url('/shared/progress-inner.png')] bg-cover bg-left rounded-full absolute top-1/2 -translate-y-1/2 left-[9%] -translate-x-1/2;
-    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
-  }
+      .progressLine {
+        @apply w-full h-[20rem] bg-[url('/shared/progress-inner.png')] bg-cover bg-left rounded-full absolute top-1/2 -translate-y-1/2 left-[9%] -translate-x-1/2;
+        box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
+      }
 
   @media screen and (min-width: 641px) {
    @apply w-[526rem] h-[18rem] bg-white rounded-full mt-[54rem] mx-auto border-[1rem] border-[#494B54];
