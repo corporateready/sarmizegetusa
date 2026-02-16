@@ -12,13 +12,13 @@ import {usePathname} from "next/navigation";
 export default function Home() {
   const path = usePathname();
   
-  const [isHome, setIsHome] = React.useState(false);
-  React.useEffect(() => {
-    if (path === "/") {
-      setIsHome(true);
-    }
+  // const [isHome, setIsHome] = React.useState(false);
+  // React.useEffect(() => {
+  //   if (path === "/") {
+  //     setIsHome(true);
+  //   }
     
-  }, [path]);
+  // }, [path]);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [isOpenBottom, setIsOpenBottom] = React.useState(false);
