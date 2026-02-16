@@ -6,46 +6,13 @@ import {motion} from "motion/react";
 const Index = () => {
   const [isActiveButton, setIsActiveButton] = React.useState(false);
   return (
-    <motion.button
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.1 }}
+    <Link
+    href={"/thank-you-ru"}
       type="button"
-      className={
-        !isActiveButton
-          ? styles.header_navigate__lang
-          : styles.header_navigate__lang_active
-      }
-      onClick={() => setIsActiveButton(!isActiveButton)}
+      className={styles.header_navigate__lang}
     >
-      <span
-        className={`${styles.header__drop_lang__span_initial} ${
-          isActiveButton
-            ? styles.header__drop_lang__span
-            : "border-0"
-        }`}
-      >
-        ro
-      </span>
-      {isActiveButton ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          onChange={(e) => e.stopPropagation()}
-          className={styles.header__drop_lang}
-        >
-          <Link
-            href={"/thank-you-ru"}
-            className={styles.header__drop_lang__link}
-          >
-            ru
-          </Link>
-        </motion.div>
-      ) : (
-        ""
-      )}
-    </motion.button>
+     ru
+    </Link>
   );
 };
 
