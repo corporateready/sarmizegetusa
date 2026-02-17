@@ -4,51 +4,83 @@
   @apply w-full h-[676rem] relative mt-[-210rem] mb-[120rem] z-[-1];
   font-family: "Montserrat", sans-serif;
 
-  @media screen and (width > 640px) {
-    @apply w-full h-[1300rem] relative mt-[-220rem] mb-[-25rem] z-[-1];
+  @media screen and (width >= 640px) {
+    @apply w-[1440rem] h-[1000rem] relative mt-[-60rem] mb-[115rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply w-full h-[1180px] relative mt-[-214px] mb-[-10px] z-3;
+    @apply w-[700px] h-[800px] relative mt-[254px] mb-[-96px] z-3;
   }
-
   &::before {
-    content: '';
-    @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-3rem] left-[3rem] z-0;
+    content: "";
+    @apply inline-block w-[400rem] h-[360rem] absolute top-[65%] left-1/2 -translate-1/2 z-2 bg-cover bg-no-repeat rounded-full ; 
+    background: radial-gradient(circle,rgb(250, 247, 146) 0%, rgba(218, 119, 11, 0.6) 40%, rgba(150, 40, 5, 0) 100%);
+    filter: blur(50px);
+    @media screen and (width >= 640px) {
+    @apply w-[780rem] h-[700rem] top-[53%]; 
+    }
+    @media screen and (width >= 1920px) {
+    @apply w-[700px] h-[650px] top-[160px]; 
+    }
+  }
+  .letter__body {
+    @apply w-[430rem] h-full bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-0 left-1/2 -translate-x-1/2 z-1;
 
     @media screen and (width >= 640px) {
-      @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-contain bg-center bg-no-repeat absolute top-[-126rem] left-0 z-0;
+      @apply w-full h-full bg-[url('/letter/body-letter.avif')] top-[-132rem];
     }
 
     @media screen and (width >= 1920px) {
-      @apply top-[-123px];
+      @apply w-[1300px] absolute top-0 left-1/2 -translate-1/2;
     }
   }
+.letter__front {
+    @apply w-[354rem] h-[210rem] bg-[url('/letter/up-letter.png')] bg-cover bg-center bg-no-repeat absolute top-[468rem] left-1/2 -translate-x-1/2 z-4;
+
+    @media screen and (width >= 640px) {
+      @apply w-[824rem] h-[496rem] bg-[url('/letter/up-letter.png')] top-[526rem] ml-[8rem];
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply w-[744px] h-[446px] top-[144px] ml-[8px];
+    }
+}
+}
+.letter__inner {
+  @apply w-[315rem] h-[260rem] bg-[#962805]/45 absolute bottom-[64rem] left-1/2 -translate-x-1/2 z-2;
+
+  @media screen and (width >= 640px) {
+      @apply w-[600rem] h-[600rem] absolute bottom-[48em] left-1/2 -translate-x-1/2 z-3;
+    }
+
+    @media screen and (width >= 1920px) {
+      @apply w-[500px] h-[540px] bottom-[268px];
+    }
 }
 .letter__title {
-  @apply text-[26rem] text-white font-semibold leading-none absolute top-[412rem] left-0 text-center w-full z-[1];
+  @apply text-[26rem] text-white font-semibold leading-none absolute top-[66rem] left-0 text-center w-full z-[1];
 
-    @media screen and (min-width: 641px) {
-      @apply text-[46rem] text-white font-semibold leading-[110%] absolute top-[632rem] left-0 text-center w-full z-[1];
+    @media screen and (width >= 640px) {
+      @apply text-[46rem] text-white font-semibold leading-[110%] absolute top-[120rem] left-0 text-center w-full z-[1];
     }
 
     @media screen and (width >= 1920px) {  
-      @apply text-[42px] font-semibold absolute top-[568px] left-0 text-center w-full z-[1];
+      @apply text-[42px] font-semibold absolute top-[110px] left-0 text-center w-full z-[1];
     }
 }
 .letter__description {
-  @apply text-[10rem] text-white font-normal leading-[112%] absolute top-[476rem] left-0 text-center w-full z-[1];
+  @apply text-[10rem] text-white font-normal leading-[112%] absolute top-[126rem] left-0 text-center w-full z-[1];
 
-  @media screen and (min-width: 641px) {
-    @apply text-[20rem] text-white font-normal absolute top-[744rem] left-0 text-center w-full z-[1];
+  @media screen and (width >= 640px) {
+    @apply text-[20rem] text-white font-normal absolute top-[232rem] left-0 text-center w-full z-[1];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply text-[22px] font-normal leading-[110%] absolute top-[672px] left-0 text-center w-full z-[1];
+    @apply text-[22px] font-normal leading-[110%] absolute top-[214px] left-0 text-center w-full z-[1];
   }
 }
 .letter__button_access {
-  @apply text-white text-[21.2rem] font-medium leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[712rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[21.2rem] font-medium leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[710rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -90,8 +122,8 @@
   }
 }
 
-  @media screen and (width > 640px) {
-  @apply text-white text-[30rem] leading-[100%] w-[454rem] h-[78rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1025rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  @media screen and (width >= 640px) {
+  @apply text-white text-[30rem] leading-[100%] w-[454rem] h-[78rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-5 top-[870rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0%;
     background: linear-gradient(
@@ -104,7 +136,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[27px] leading-[100%] w-[454px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[923px] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+    @apply text-[27px] leading-[100%] w-[454px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute top-[454px] left-1/2 -translate-x-1/2 hover:cursor-pointer;
   }
 
   .button__detail_sparkle_left {

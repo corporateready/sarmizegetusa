@@ -4,22 +4,37 @@ import { motion } from "motion/react";
 
 const Index = ({ handleToggleModalBottom }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className={styles.letter}
-    >
-      <p className={styles.letter__title}>
+    <motion.div className={styles.letter}>
+      <span className={styles.letter__body}></span>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className={styles.letter__inner}
+      >
+        <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className={styles.letter__title}
+      >
         Узнай о доступных
-        <br />вариантах приобретения
-      </p>
-      <p className={styles.letter__description}>
+        <br />
+        вариантах приобретения
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className={styles.letter__description}
+      >
         Запроси первичную информацию
         <br />о проекте и условиях оплаты
-        <br />на старте продаж
-      </p>
+        <br />
+        на старте продаж
+      </motion.p>
+      </motion.div>
       <button
         className={styles.letter__button_access}
         onClick={handleToggleModalBottom}
@@ -28,6 +43,7 @@ const Index = ({ handleToggleModalBottom }) => {
         <span className={styles.button__detail_sparkle_left}></span>
         <span className={styles.button__detail_sparkle_right}></span>
       </button>
+      <span className={styles.letter__front} />
     </motion.div>
   );
 };
