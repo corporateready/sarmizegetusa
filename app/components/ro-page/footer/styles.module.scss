@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .footer {
-  @apply w-full h-auto bg-[#0D101D] px-[37rem] py-[26rem] overflow-y-hidden;
+  @apply w-full h-auto bg-[#0D101D] px-[37rem] py-[26rem] overflow-y-hidden relative z-3;
   font-family: "Montserrat", sans-serif;
 
   @media screen and (min-width: 641px) {
@@ -68,6 +68,18 @@
    }
 }
 .footer__social_i {
+  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] bg-none absolute top-0 right-[108rem] sm:right-[210rem] z-2;
+  @media screen and (width >= 1920px) {
+    @apply w-[60px] h-[60px] right-[220px];
+  }
+}
+.footer__social_span {
+  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30 absolute top-0 right-[108rem] sm:right-[210rem] translate-0 z-0;
+  @media screen and (width >= 1920px) {
+    @apply w-[60px] h-[60px] right-[220px];
+  }
+}
+.footer__social {
   @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30;
   @media screen and (width >= 1920px) {
     @apply w-[60px] h-[60px];
