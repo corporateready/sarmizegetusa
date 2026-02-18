@@ -30,7 +30,7 @@ const Index = () => {
               href="https://www.facebook.com/profile.php?id=61576667134945"
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
@@ -48,7 +48,7 @@ const Index = () => {
               href="https://www.instagram.com/imobile.vanzari/"
               rel="noopener noreferrer"
               aria-label="Visit our Instagram page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
@@ -66,7 +66,7 @@ const Index = () => {
               href="/"
               rel="noopener noreferrer"
               aria-label="Visit our You Tube page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
