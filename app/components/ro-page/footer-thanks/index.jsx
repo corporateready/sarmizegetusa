@@ -9,7 +9,7 @@ const Index = () => {
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
           <div className={styles.footer__inner_top__links}>
-            <Link href="tel:+37378989899" aria-label="Call to us" className={styles.footer__social_i}>
+            <span className={styles.footer__social_span}>
               <svg
                 className="w-full h-full"
                 viewBox="0 0 30 30"
@@ -21,12 +21,15 @@ const Index = () => {
                   fill="white"
                 />
               </svg>
+            </span>
+            <Link href="tel:" aria-label="Call to us" className={styles.footer__social_i}>
+              
             </Link>
             <Link
-              href="/"
+              href="https://www.facebook.com/profile.php?id=61576667134945"
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
@@ -41,10 +44,10 @@ const Index = () => {
               </svg>
             </Link>
             <Link
-              href="/"
+              href="https://www.instagram.com/imobile.vanzari/"
               rel="noopener noreferrer"
               aria-label="Visit our Instagram page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
@@ -62,7 +65,7 @@ const Index = () => {
               href="/"
               rel="noopener noreferrer"
               aria-label="Visit our You Tube page"
-              className={styles.footer__social_i}
+              className={styles.footer__social}
             >
               <svg
                 className="w-full h-full"
