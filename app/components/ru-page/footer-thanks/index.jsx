@@ -23,7 +23,7 @@ const Index = () => {
                 />
               </svg>
              </span>
-            <Link href="tel:" aria-label="Call to us" className={styles.footer__social_i}>
+            <Link href="tel:+37376039073" aria-label="Call to us" className={styles.footer__social_i}>
              
             </Link>
             <Link

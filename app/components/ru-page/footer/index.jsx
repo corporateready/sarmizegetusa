@@ -48,7 +48,7 @@ const Index = () => {
               </svg>
             </span>
             <Link
-              href="tel:+37378989899"
+              href="tel:+37376039073"
               aria-label="Call to us"
               className={`${styles.footer__social_i} text-[0rem]`}
             >
