@@ -51,13 +51,6 @@ const Index = () => {
             <br />для каждого жильца
           </span>
         </motion.div>
-        <motion.div className={styles.facilities__item_4}>
-          <span className={styles.facilities__item__title}>
-            Уличный Art&Lounge
-            <br />для взрослых {""}
-            <br className="hidden sm:inline-block" />с BBQ и WiFi
-          </span>
-        </motion.div>
       </div>
     </div>
   );

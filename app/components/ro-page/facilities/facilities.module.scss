@@ -126,30 +126,3 @@
     }
   }
 }
-.facilities__item_4 {
-  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-  @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(4) {
-      @apply order-4;
-  } 
-  }
-
-  @media screen and (width >= 1920px) {  
-    @apply w-full h-[366px];
-  }
-
-  span {
-    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
-
-    @media screen and (min-width: 641px) {
-     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
-    }
-
-    @media screen and (width >= 1920px) {
-     @apply text-[22px] font-medium text-white leading-[24px] w-full absolute top-[18px] left-[26px] z-[2];
-    }
-  }
-}

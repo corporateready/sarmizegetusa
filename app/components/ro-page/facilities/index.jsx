@@ -53,13 +53,6 @@ const Index = () => {
             <br className="block sm:hidden" /> locatar
           </span>
         </motion.div>
-        <motion.div className={styles.facilities__item_4}>
-          <span className={styles.facilities__item__title}>
-            Art&Lounge exterior pentru {""}
-            <br className="block sm:hidden" /> adulți {""}{" "}
-            <br className="hidden sm:block" /> cu BBQ și WiFi
-          </span>
-        </motion.div>
       </div>
     </div>
   );
