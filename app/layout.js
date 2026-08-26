@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         /> */}
       </head>
       <body className={`bg-[#060916] antialiased`}>
-        <NotFound />
+        {children}
         <Script
           id="to-top"
           dangerouslySetInnerHTML={{

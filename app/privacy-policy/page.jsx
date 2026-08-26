@@ -9,7 +9,7 @@ const Page = () => {
       <div className={styles.container}>
         <div className={styles.terms__content}>
           <p className={styles.headLine__title}>
-            Privacy Policy for "BINA-AGENCY" S.R.L.
+            Privacy Policy for "KAIROS WAY" S.R.L.
           </p>
           <p className={styles.description}>
             At SARMIGEZETUSA.MD, accessible from SARMIZEGETUSA.MD, one of our

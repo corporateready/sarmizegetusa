@@ -19,6 +19,20 @@ const Index = () => {
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
+          <Link
+            href="https://avalonfinance.md/solutii/prima-cheie/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Prima Cheie — наш партнёр в финансировании недвижимости"
+            className={styles.partner}
+          >
+            <p className={styles.partner__text}>
+              <img src="/prima-cheie-logo.svg" alt="Prima Cheie" /> — наш
+              партнёр
+              <br />в финансировании недвижимости
+            </p>
+          </Link>
+
           <div className={styles.footer__inner_top__links}>
             <span className={styles.footer__social_span}>
               <svg
@@ -100,6 +114,7 @@ const Index = () => {
         </div>
 
         <div className={styles.footer__inner_bottom}>
+
           <p className={styles.footer__inner_bottom__text}>
             © 2026 Все права защищены.
           </p>
