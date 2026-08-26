@@ -1,0 +1,9 @@
+# Версия TRIUMF Botanica -> проект Netlify "triumf-botanica-original"
+# Ветка triumf-botanica. Продакшен sarmizegetusa.md собирается из main.
+
+[build]
+  command = "yarn run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
