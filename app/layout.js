@@ -64,20 +64,20 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-        {/* <GoogleTagManager gtmId={GTM_ID} />
+        <GoogleTagManager gtmId={GTM_ID} />
+      </head>
+      <body className={`bg-[#060916] antialiased`}>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
             <iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
-                    height="0" 
-                    width="0" 
+                    height="0"
+                    width="0"
                     style="display:none;visibility:hidden">
             </iframe>
             `,
           }}
-        /> */}
-      </head>
-      <body className={`bg-[#060916] antialiased`}>
+        />
         <Script
           id="roistat-counter"
           strategy="afterInteractive"
