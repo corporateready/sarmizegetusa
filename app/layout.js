@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Manrope:wght@400;600;700;800&display=swap"
           rel="stylesheet"
         />
         <GoogleTagManager gtmId={GTM_ID} />

@@ -24,10 +24,10 @@
   }
 }
 .footer__inner_top {
-  @apply w-full h-full flex justify-between items-center flex-wrap gap-[12rem];
+  @apply w-full h-full flex justify-end items-center;
 }
 .footer__inner_top__links {
-  @apply flex items-center gap-[6rem] ml-auto order-1 sm:order-2 relative;
+  @apply flex items-center gap-[6rem];
 
   @media screen and (min-width: 641px) {
     @apply flex items-center gap-[10rem];
@@ -67,13 +67,13 @@
    }
 }
 .footer__social_i {
-  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] bg-none absolute top-1/2 -translate-y-1/2 right-[108rem] sm:right-[210rem] z-2;
+  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] bg-none absolute top-0 right-[108rem] sm:right-[210rem] z-2;
   @media screen and (width >= 1920px) {
     @apply w-[60px] h-[60px] right-[220px];
   }
 }
 .footer__social_span {
-  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30 absolute top-1/2 -translate-y-1/2 right-[108rem] sm:right-[210rem] z-0;
+  @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30 absolute top-0 right-[108rem] sm:right-[210rem] translate-0 z-0;
   @media screen and (width >= 1920px) {
     @apply w-[60px] h-[60px] right-[220px];
   }
@@ -82,45 +82,5 @@
   @apply w-[30rem] h-[30rem] sm:w-[60rem] sm:h-[60rem] opacity-30;
   @media screen and (width >= 1920px) {
     @apply w-[60px] h-[60px];
-  }
-}
-.partner {
-  @apply inline-block bg-[rgba(255,255,255,0.9)] rounded-[10rem] px-[14rem] pt-[10rem] pb-[11rem] order-2 sm:order-1;
-  transition: box-shadow 0.25s;
-
-  &:hover {
-    box-shadow: 0 10px 34px rgba(3, 93, 60, 0.28);
-  }
-
-  @media screen and (min-width: 641px) {
-    @apply rounded-[12rem] px-[16rem] pt-[11rem] pb-[12rem];
-  }
-
-  @media screen and (width >= 1920px) {
-    @apply rounded-[12px] px-[16px] pt-[11px] pb-[12px];
-  }
-}
-.partner__text {
-  @apply text-[12rem] font-medium text-[#3c443e];
-  line-height: 1.8;
-
-  img {
-    @apply inline w-auto align-baseline mr-[3rem] h-[16rem];
-  }
-
-  @media screen and (min-width: 641px) {
-    @apply text-[15rem];
-
-    img {
-      @apply h-[21rem] mr-[4rem];
-    }
-  }
-
-  @media screen and (width >= 1920px) {
-    @apply text-[15px];
-
-    img {
-      @apply h-[21px] mr-[4px];
-    }
   }
 }

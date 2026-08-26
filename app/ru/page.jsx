@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "../components/ru-page/hero";
 import Letter from "../components/ru-page/letter";
 import Footer from "../components/ru-page/footer";
+import PartnerBanner from "../components/ru-page/partner-banner";
 import HeroForm from "../components/ru-page/hero-form";
 import HeroFormBottom from "../components/ru-page/hero-form-bottom";
 import styles from "./styles.module.scss"
@@ -38,6 +39,7 @@ export default function Home() {
     >
       <Hero handleToggle={handleToggleModal} />
       <Letter handleToggleModalBottom={handleToggleModalBottom} />
+      <PartnerBanner />
       <Footer />
       {isOpen && <HeroForm handleToggleModal={handleToggleModal} />}
       {isOpenBottom && (

@@ -1,0 +1,117 @@
+@reference "tailwindcss";
+
+/* Секция партнёрского баннера Prima Cheie — по макету Figma (фрейм 1600×240, масштаб под контейнер 1230) */
+.partner {
+  @apply w-full bg-[#0D101D] px-[16rem] pt-[30rem] pb-[6rem] relative z-3;
+  font-family: "Manrope", "Montserrat", sans-serif;
+
+  @media screen and (min-width: 641px) {
+    @apply px-0 pt-[40rem] pb-[8rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply pt-[40px] pb-[10px];
+  }
+}
+
+.partner__card {
+  @apply flex flex-col gap-[16rem] bg-[rgba(255,255,255,0.9)] rounded-[16rem] px-[20rem] py-[20rem] no-underline;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: 0 14px 44px rgba(3, 93, 60, 0.32);
+  }
+
+  @media screen and (min-width: 641px) {
+    @apply w-[1230rem] mx-auto flex-row items-center gap-[38rem] rounded-[22rem] px-[31rem] py-[31rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[1200px] gap-[38px] rounded-[22px] px-[31px] py-[31px];
+  }
+}
+
+.partner__heading {
+  @apply flex flex-col gap-[8rem];
+
+  @media screen and (min-width: 641px) {
+    @apply w-[430rem] shrink-0 gap-[9rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[430px] gap-[9px];
+  }
+}
+
+.partner__logo {
+  @apply h-[24rem] w-auto self-start;
+
+  @media screen and (min-width: 641px) {
+    @apply h-[28rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply h-[28px];
+  }
+}
+
+.partner__title {
+  @apply text-[20rem] font-bold text-[#3D3D3D];
+  line-height: 1.28;
+
+  @media screen and (min-width: 641px) {
+    @apply text-[28rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[28px];
+  }
+}
+
+.partner__text {
+  @apply flex flex-col gap-[6rem];
+
+  @media screen and (min-width: 641px) {
+    @apply flex-1 gap-[7rem];
+  }
+}
+
+.partner__desc {
+  @apply text-[13.5rem] font-normal text-[#3D3D3D];
+  line-height: 1.55;
+
+  @media screen and (min-width: 641px) {
+    @apply text-[14rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[14px];
+  }
+}
+
+.partner__detail {
+  @apply text-[12rem] font-semibold text-[#027F36];
+  line-height: 1.45;
+
+  @media screen and (width >= 1920px) {
+    @apply text-[12px];
+  }
+}
+
+.partner__btn {
+  @apply inline-flex items-center justify-center bg-[#035D3C] text-white rounded-[12rem] px-[16rem] py-[14rem] text-[11rem] font-extrabold uppercase whitespace-nowrap;
+  letter-spacing: 0.02em;
+  transition: background 0.25s;
+
+  @media screen and (min-width: 641px) {
+    @apply shrink-0 rounded-[15rem] px-[17rem] py-[15rem] text-[11.5rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply rounded-[15px] px-[17px] py-[15px] text-[11.5px];
+  }
+}
+
+.partner__card:hover .partner__btn {
+  background: #0a7a4a;
+}
