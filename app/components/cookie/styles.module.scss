@@ -1,0 +1,263 @@
+@reference "tailwindcss";
+
+.overlay {
+  @apply fixed inset-0 z-9999 flex items-center justify-center p-[16rem];
+  background: rgba(6, 9, 22, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  @media screen and (width >= 1920px) {
+    @apply p-[16px];
+  }
+}
+
+.card {
+  font-family: "Montserrat", sans-serif;
+
+  @apply w-full sm:w-[520rem] max-h-[calc(100dvh-32rem)] overflow-y-auto flex flex-col rounded-[16rem] p-[20rem] sm:p-[28rem];
+  background: #e8dad8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 24rem 80rem rgba(0, 0, 0, 0.45);
+  outline: none;
+
+  @media screen and (width >= 1920px) {
+    @apply sm:w-[520px] rounded-[16px] sm:p-[28px];
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.card__head {
+  @apply flex items-center justify-between gap-[16rem] mb-[16rem] sm:mb-[20rem];
+
+  @media screen and (width >= 1920px) {
+    @apply gap-[16px] mb-[20px];
+  }
+}
+
+.card__head_title {
+  @apply flex items-center gap-[12rem];
+
+  @media screen and (width >= 1920px) {
+    @apply gap-[12px];
+  }
+}
+
+.card__icon {
+  @apply flex h-[40rem] w-[40rem] shrink-0 items-center justify-center rounded-full bg-[#EB8B0C];
+
+  @media screen and (width >= 1920px) {
+    @apply h-[40px] w-[40px];
+  }
+}
+
+.card__icon_svg {
+  @apply h-[22rem] w-[22rem] text-white;
+
+  @media screen and (width >= 1920px) {
+    @apply h-[22px] w-[22px];
+  }
+}
+
+.card__title {
+  @apply m-0 text-[16rem] sm:text-[17rem] font-bold leading-[130%] text-[#16171E];
+
+  @media screen and (width >= 1920px) {
+    @apply text-[17px];
+  }
+}
+
+.card__langs {
+  @apply flex items-center gap-[14rem] shrink-0;
+
+  @media screen and (width >= 1920px) {
+    @apply gap-[14px];
+  }
+}
+
+.card__lang {
+  @apply text-[13rem] font-semibold text-[#857b76] cursor-pointer bg-transparent border-none pb-[2rem];
+  border-bottom: 1rem solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    @apply text-[#16171E];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[13px] pb-[2px];
+    border-bottom-width: 1px;
+  }
+}
+
+.card__lang_active {
+  @apply text-[#16171E];
+  border-bottom-color: #eb8b0c;
+}
+
+.card__close {
+  @apply flex h-[32rem] w-[32rem] shrink-0 items-center justify-center rounded-full text-[14rem] leading-none text-[#16171E] cursor-pointer bg-transparent;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply h-[32px] w-[32px] text-[14px];
+  }
+}
+
+.card__desc {
+  @apply m-0 text-[13rem] leading-[155%] text-[#50525B] pb-[18rem] sm:pb-[22rem];
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media screen and (width >= 1920px) {
+    @apply text-[13px] pb-[22px];
+  }
+}
+
+.card__actions {
+  @apply mt-[18rem] sm:mt-[22rem] grid grid-cols-1 sm:grid-cols-3 gap-[10rem];
+
+  @media screen and (width >= 1920px) {
+    @apply mt-[22px] gap-[10px];
+  }
+}
+
+.btn_ghost,
+.btn_primary {
+  font-family: "Montserrat", sans-serif;
+
+  @apply w-full rounded-full px-[10rem] py-[12rem] text-[12rem] font-bold leading-[120%] cursor-pointer;
+  transition: all 0.15s ease;
+
+  @media screen and (width >= 1920px) {
+    @apply px-[10px] py-[12px] text-[12px];
+  }
+}
+
+.btn_ghost {
+  @apply text-[#16171E] bg-transparent;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.btn_primary {
+  @apply text-white bg-[#EB8B0C] border-none;
+
+  &:hover {
+    @apply scale-105;
+  }
+}
+
+.card_modal {
+  @apply sm:w-[600rem];
+
+  @media screen and (width >= 1920px) {
+    @apply sm:w-[600px];
+  }
+}
+
+.row {
+  @apply flex items-start justify-between gap-[16rem] pt-[16rem] pb-[16rem];
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media screen and (width >= 1920px) {
+    @apply gap-[16px] pt-[16px] pb-[16px];
+  }
+}
+
+.row_last {
+  @apply pb-0;
+  border-bottom: none;
+}
+
+.row__info {
+  @apply flex-1;
+}
+
+.row__label {
+  @apply m-0 text-[14rem] font-semibold text-[#16171E];
+
+  @media screen and (width >= 1920px) {
+    @apply text-[14px];
+  }
+}
+
+.row__desc {
+  @apply mt-[5rem] mb-0 text-[12rem] leading-[150%] text-[#50525B];
+
+  @media screen and (width >= 1920px) {
+    @apply mt-[5px] text-[12px];
+  }
+}
+
+.row__always {
+  @apply shrink-0 whitespace-nowrap text-[11rem] font-semibold text-[#EB8B0C] mt-[3rem];
+
+  @media screen and (width >= 1920px) {
+    @apply text-[11px] mt-[3px];
+  }
+}
+
+.toggle {
+  @apply relative shrink-0 w-[42rem] h-[24rem] rounded-full cursor-pointer;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: background 0.18s ease;
+
+  @media screen and (width >= 1920px) {
+    @apply w-[42px] h-[24px];
+  }
+}
+
+.toggle_on {
+  background: rgba(235, 139, 12, 0.3);
+}
+
+.toggle__knob {
+  @apply absolute top-[2rem] left-[2rem] w-[18rem] h-[18rem] rounded-full;
+  background: #8b877f;
+  transition: left 0.18s ease, background 0.18s ease;
+
+  .toggle_on & {
+    @apply left-[20rem];
+    background: #eb8b0c;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply top-[2px] left-[2px] w-[18px] h-[18px];
+
+    .toggle_on & {
+      @apply left-[20px];
+    }
+  }
+}
+
+.cta {
+  @apply fixed bottom-[12rem] left-[12rem] sm:bottom-[28rem] sm:left-[28rem] z-9998 flex h-[48rem] w-[48rem] items-center justify-center rounded-full bg-[#EB8B0C] cursor-pointer;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8rem 24rem rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease;
+
+  &:hover {
+    @apply scale-105;
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply bottom-[28px] left-[28px] h-[48px] w-[48px];
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.cta__svg {
+  @apply h-[26rem] w-[26rem] text-white;
+
+  @media screen and (width >= 1920px) {
+    @apply h-[26px] w-[26px];
+  }
+}
