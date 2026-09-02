@@ -8,10 +8,13 @@ import HeroForm from "../components/ru-page/hero-form";
 import HeroFormBottom from "../components/ru-page/hero-form-bottom";
 import styles from "./styles.module.scss"
 import { motion } from "motion/react";
+import { useScrollDepth } from "../../lib/useScrollDepth";
 
 export default function Home() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isOpenBottom, setIsOpenBottom] = React.useState(false);
+
+  useScrollDepth();
 
   const handleToggleModal = () => {
     setIsOpen(!isOpen);

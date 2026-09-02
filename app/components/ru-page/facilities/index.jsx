@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./facilities.module.scss";
 import { motion } from "motion/react";
+import { useSectionViewed } from "../../../../lib/useSectionViewed";
 
 const Index = () => {
+  const sectionRef = useSectionViewed("facilities");
+
   return (
-    <div className={styles.facilities}>
+    <div className={styles.facilities} ref={sectionRef}>
       <h6 className={styles.facilities__title}>
         Удобства, которые {""}
         <br className="inline-block sm:hidden" />превращают 

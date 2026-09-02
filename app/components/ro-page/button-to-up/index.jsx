@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./styles.module.scss";
+import { track } from "../../../../lib/track";
 
 const Index = () => {
 
@@ -8,7 +9,8 @@ const Index = () => {
       href="#header"
       className={styles.letter__button_up}
       rel="noopener noreferrer"
-      aria-label="back to start web-site">
+      aria-label="back to start web-site"
+      onClick={() => track("back_to_top_clicked")}>
       <svg
         className={styles.letter__button_up_icon}
         viewBox="0 0 9 17"

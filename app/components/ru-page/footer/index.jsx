@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import ButtonToUp from "../button-to-up";
+import { track } from "../../../../lib/track";
 
 const Index = () => {
   const [isPathName, setIsPathName] = React.useState("");
@@ -38,6 +39,7 @@ const Index = () => {
               href="tel:+37376039073"
               aria-label="Call to us"
               className={`${styles.footer__social_i} text-[0rem]`}
+              onClick={() => track("phone_clicked", { placement: "footer" })}
             >
               
             </Link>
@@ -46,6 +48,7 @@ const Index = () => {
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page"
               className={styles.footer__social}
+              onClick={() => track("social_clicked", { network: "facebook" })}
             >
               <svg
                 className="w-full h-full"
@@ -64,6 +67,7 @@ const Index = () => {
               rel="noopener noreferrer"
               aria-label="Visit our Instagram page"
               className={styles.footer__social}
+              onClick={() => track("social_clicked", { network: "instagram" })}
             >
               <svg
                 className="w-full h-full"
@@ -82,6 +86,7 @@ const Index = () => {
               rel="noopener noreferrer"
               aria-label="Visit our You Tube page"
               className={styles.footer__social}
+              onClick={() => track("social_clicked", { network: "tiktok" })}
             >
               <svg
                 className="w-full h-full"

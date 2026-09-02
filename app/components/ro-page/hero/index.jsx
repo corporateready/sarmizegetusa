@@ -6,8 +6,12 @@ import Title from "../title";
 import HeartAnimate from "../heart-animate";
 import Header from "../header";
 import Image from "next/image";
+import { track } from "../../../../lib/track";
+import { useSectionViewed } from "../../../../lib/useSectionViewed";
 
 const Hero = ({ handleToggle }) => {
+  const locationRef = useSectionViewed("location");
+
   return (
     <>
     <div className={styles.hero__wrapper}>
@@ -58,7 +62,13 @@ const Hero = ({ handleToggle }) => {
             sectorului Botanica
           </span>
         </p>
-        <button className={styles.button__detail} onClick={handleToggle}>
+        <button
+          className={styles.button__detail}
+          onClick={() => {
+            track("cta_clicked", { placement: "hero" });
+            handleToggle();
+          }}
+        >
           <span className={styles.button__detail__text}>Află detalii acum</span>
           <span className={styles.button__detail__line_bottom}></span>
           <span className={styles.button__detail__sparkle}></span>
@@ -70,7 +80,7 @@ const Hero = ({ handleToggle }) => {
         </button>
       </div>
       {/* Location */}
-      <div className={styles.location__wrapper}>
+      <div className={styles.location__wrapper} ref={locationRef}>
           <Image
             src={"/location-bg-mobile.avif"}
             alt="sarmizegetusa location background"

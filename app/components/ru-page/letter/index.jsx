@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "./letter.module.scss";
 import { motion } from "motion/react";
+import { track } from "../../../../lib/track";
+import { useSectionViewed } from "../../../../lib/useSectionViewed";
 
 const Index = ({ handleToggleModalBottom }) => {
+  const sectionRef = useSectionViewed("offer");
+
   return (
-    <motion.div className={styles.letter}>
+    <motion.div className={styles.letter} ref={sectionRef}>
       <span className={styles.letter__body}></span>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -37,7 +41,10 @@ const Index = ({ handleToggleModalBottom }) => {
       </motion.div>
       <button
         className={styles.letter__button_access}
-        onClick={handleToggleModalBottom}
+        onClick={() => {
+          track("cta_clicked", { placement: "letter" });
+          handleToggleModalBottom();
+        }}
       >
         <span>Получить индивидуальное предложение</span>
         <span className={styles.button__detail_sparkle_left}></span>

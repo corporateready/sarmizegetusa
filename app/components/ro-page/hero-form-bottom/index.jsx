@@ -1,4 +1,5 @@
 import React from "react";
+import { track } from "../../../../lib/track";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
 import ProgressBar from "../form-progress-bar";
@@ -29,6 +30,25 @@ const Index = ({ handleToggleModalBottom }) => {
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+  const isFormStartedRef = React.useRef(false);
+  const isCloseTrackedRef = React.useRef(false);
+  const handleCloseForm = () => {
+    if (!isFormSubmitted && !isCloseTrackedRef.current) {
+      isCloseTrackedRef.current = true;
+      track("form_closed", {
+        placement: "bottom",
+        started: isFormStartedRef.current,
+        fields_filled: [name, email, phone].filter(Boolean).length,
+      });
+    }
+    handleToggleModalBottom();
+  };
+
+  const handleFormStart = () => {
+    if (isFormStartedRef.current) return;
+    isFormStartedRef.current = true;
+    track("form_started", { placement: "bottom" });
+  };
   const [isDisabled, setIsDisabled] = React.useState(false);
 
   const [userLocation, setUserLocation] = React.useState("");
@@ -118,14 +138,17 @@ const Index = ({ handleToggleModalBottom }) => {
   };
   
   const handleChangeName = (e) => {
+    handleFormStart();
     setName(e.target.value);
   };
 
   const handleChangeEmail = (e) => {
+    handleFormStart();
     setEmail(e.target.value);
   };
 
   const handleChangePhone = (value) => {
+    handleFormStart();
     let cleanedValue = value.replace(/^\+0+/, "+3730");
     cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
@@ -137,6 +160,24 @@ const Index = ({ handleToggleModalBottom }) => {
       setIsDisabled(true);
     }
   }, [name,email, phone, isDisabled])
+
+  const isValidationFailedRef = React.useRef(false);
+  React.useEffect(() => {
+    if (isDisabled || isValidationFailedRef.current) return;
+    if (!name || !email || !phone) return;
+
+    const timer = setTimeout(() => {
+      isValidationFailedRef.current = true;
+      track("form_validation_failed", {
+        placement: "bottom",
+        name_ok: name.length >= 3,
+        email_ok: Boolean(email.match("@")),
+        phone_ok: phone.length >= 12,
+      });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [name, email, phone, isDisabled]);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -144,12 +185,12 @@ const Index = ({ handleToggleModalBottom }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
       className={styles.hero__form}
-      onClick={handleToggleModalBottom}
+      onClick={handleCloseForm}
     >
       <div className={styles.form__wrapper}>
         <button
           className={styles.hero__form_close_button}
-          onClick={handleToggleModalBottom}
+          onClick={handleCloseForm}
         >
           <svg
             className="w-full h-full absolute top-0 left-0"

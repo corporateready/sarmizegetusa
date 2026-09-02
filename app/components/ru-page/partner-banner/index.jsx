@@ -1,16 +1,21 @@
 "use client";
 import React from "react";
 import styles from "./styles.module.scss";
+import { track } from "../../../../lib/track";
+import { useSectionViewed } from "../../../../lib/useSectionViewed";
 
 const Index = () => {
+  const sectionRef = useSectionViewed("partner");
+
   return (
-    <section className={styles.partner}>
+    <section className={styles.partner} ref={sectionRef}>
       <a
         href="https://avalonfinance.md/solutii/prima-cheie/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Prima Cheie — узнай варианты финансирования на avalonfinance.md"
         className={styles.partner__card}
+        onClick={() => track("partner_banner_clicked", { partner: "prima-cheie" })}
       >
         <div className={styles.partner__heading}>
           <img

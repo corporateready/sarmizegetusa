@@ -24,6 +24,7 @@ import {
   CONSENT_TRANSLATIONS,
   getConsentLocale,
 } from "./consent-translations";
+import { track } from "../../../lib/track";
 
 const DEFAULT_PREFS = { analytics: false, marketing: false };
 
@@ -135,7 +136,14 @@ export default function ConsentManager() {
     saveConsent(newPrefs);
     updateGTMConsent(newPrefs);
     if (newPrefs.analytics) pushConsentEvent(eventName, newPrefs);
-    void applyAnalyticsConsent(newPrefs.analytics);
+    void applyAnalyticsConsent(newPrefs.analytics).then(() => {
+      if (newPrefs.analytics)
+        track("cookie_consent_given", {
+          choice: eventName,
+          analytics: newPrefs.analytics,
+          marketing: newPrefs.marketing,
+        });
+    });
     setModalOpen(false);
   }, []);
 
