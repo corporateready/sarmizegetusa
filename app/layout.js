@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./fonts.css";
 import Script from "next/script";
 import NotFound from "./not-found";
 import ConsentManager from "./components/cookie/ConsentManager";
@@ -21,8 +22,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <meta name="robots" content="index, follow" />
         <meta
           name="viewport"
@@ -58,10 +57,6 @@ export default function RootLayout({ children }) {
           href="/favicon_io/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Manrope:wght@400;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className={`bg-[#060916] antialiased`}>
         {children}
