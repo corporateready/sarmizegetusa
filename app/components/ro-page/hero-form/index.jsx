@@ -11,6 +11,7 @@ import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { v4 as uuidv4 } from "uuid";
+import { whenMarketingConsent } from "../../../../lib/consent";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_PIXEL_ID;
 
@@ -73,7 +74,8 @@ const Index = ({ handleToggleModal }) => {
       }
     };
 
-    getClientLocation();
+    // ipinfo.io sees the visitor's IP, so only look it up after marketing consent.
+    return whenMarketingConsent(getClientLocation);
   }, []);
 
   React.useEffect(() => {
@@ -112,8 +114,8 @@ const Index = ({ handleToggleModal }) => {
           em: email,
           ph: phone,
           fn: name,
-          ct: userLocation,
-          ip: isIP,
+          ...(userLocation && { ct: userLocation }),
+          ...(isIP && { ip: isIP }),
           pageview_event_id: isPageViewEventId,
           external_id: isExternalId,
         },
