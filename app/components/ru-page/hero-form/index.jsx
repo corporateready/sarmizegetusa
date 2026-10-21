@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { v4 as uuidv4 } from "uuid";
 import { whenMarketingConsent } from "../../../../lib/consent";
+import { submitLead } from "../../../../lib/submit-lead";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_PIXEL_ID;
 
@@ -32,6 +33,10 @@ const Index = ({ handleToggleModal }) => {
     const [email, setEmail] = React.useState("");
     const [phone, setPhone] = React.useState("");
     const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+    const [isSending, setIsSending] = React.useState(false);
+    const [sendError, setSendError] = React.useState(false);
+    const submissionIdRef = React.useRef(null);
+    const honeypotRef = React.useRef(null);
     const isFormStartedRef = React.useRef(false);
     const isCloseTrackedRef = React.useRef(false);
   const handleCloseForm = () => {
@@ -56,8 +61,6 @@ const Index = ({ handleToggleModal }) => {
     const [isFBP, setIsFBP] = React.useState("");
     const [isFBC, setIsFBC] = React.useState("");
     const [isPageViewEventId, setIsPageViewEventId] = React.useState("");
-    const [isFormSubmittedEventId, setIsFormSubmittedEventId] =
-      React.useState("");
       
     const [isExternalId, setIsExternalId] = React.useState("");
     const [isIP, setIP] = React.useState(null);
@@ -100,14 +103,37 @@ const Index = ({ handleToggleModal }) => {
       setIsFBC(fbc)
     }, []);
   
-    const formSubmitTrack = () => {
+    const formSubmitTrack = async () => {
+      if (isSending || isFormSubmitted) return;
+      setIsSending(true);
+      setSendError(false);
+
+      // One id per lead. A retry after a failed send reuses it, so ENSO never
+      // records the same lead twice. The same id goes to Meta and PostHog.
+      if (!submissionIdRef.current) submissionIdRef.current = uuidv4();
+      const submissionId = submissionIdRef.current;
+
+      const delivered = await submitLead({
+        submissionId,
+        name,
+        email,
+        phone,
+        placement: "hero",
+        honeypot: honeypotRef.current?.value,
+      });
+      if (!delivered) {
+        setIsSending(false);
+        setSendError(true);
+        return;
+      }
+
       if (typeof window !== "undefined" && typeof window.fbq !== "undefined") {
         window.fbq(
           "track",
           "Lead",
           {},
           {
-            eventID: isFormSubmittedEventId,
+            eventID: submissionId,
             fbc: isFBC,
             em: email,
             ph: phone,
@@ -119,25 +145,23 @@ const Index = ({ handleToggleModal }) => {
           },
         );
       }
-  
+
+      // Analytics only: the lead itself already reached ENSO above.
       if (typeof window !== "undefined" && window.posthog)
         window.posthog.capture("form_submitted", {
           fbc: isFBC,
           fbp: isFBP,
-          email: email,
-          phone: phone,
-          name: name,
+          placement: "hero",
           pageview_event_id: isPageViewEventId,
           external_id: isExternalId,
-          form_submitted_event_id: isFormSubmittedEventId,
+          submission_id: submissionId,
+          form_submitted_event_id: submissionId,
         });
-  
-      if (!isFormSubmitted) {
-        setIsFormSubmitted(true);
-        router.push("/thank-you-ru");
-      }
+
+      setIsFormSubmitted(true);
+      router.push("/thank-you-ru");
     };
-    
+
     const handleChangeName = (e) => {
       handleFormStart();
       setName(e.target.value);
@@ -270,11 +294,28 @@ const Index = ({ handleToggleModal }) => {
                 onChange={handleChangePhone}
               />
             </div>
+            <input
+              type="text"
+              name="contact_me_by_fax_only"
+              ref={honeypotRef}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-10000px", width: 1, height: 1, opacity: 0 }}
+            />
             <FormButton
               textButton={"Отправить"}
               formSubmitTrack={formSubmitTrack}
-              isDisabled={isDisabled}
+              isDisabled={isDisabled && !isSending}
             />
+            {sendError && (
+              <p
+                role="alert"
+                style={{ color: "#c0392b", fontSize: isMobile ? "14px" : "15rem", marginTop: "10rem" }}
+              >
+                Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.
+              </p>
+            )}
           </form>
           <motion.span className={styles.button__sparkle_1}></motion.span>
           <motion.span className={styles.button__sparkle_2}></motion.span>
